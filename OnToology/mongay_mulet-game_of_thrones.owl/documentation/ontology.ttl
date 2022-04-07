@@ -1,0 +1,862 @@
+@prefix : <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#> .
+
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0> rdf:type owl:Ontology ;
+                                                                                   rdfs:comment """This work is intented to model information about TV series, in particular, we will work on an ontology based on the TV series Game of Thrones. Game of Thrones is the television series created by HBO that adapts the novel saga the Song of Ice and Fire, by George R.R. Martin. The story describes the struggle for a throne, the iron throne, forged with the swords of defeated enemies. Seven are the kingdoms of the West and many are the houses that will contest the crown: the heirs, the exiles, the dispossessed and the current regents.
+
+This work is part of the assignment PAC2 of the subject \"Representació del coneixement\" of the UOC (Universitat Oberta de Catalunya). Spring edition 2021-22/2.
+
+Authors:
+- Mónica Mongay (mmongay4@uoc.edu)
+- Josep Mulet Pol (jmuletpol@uoc.edu)"""@en ;
+                                                                                   rdfs:seeAlso "https://es.wikipedia.org/wiki/Game_of_Thrones" ;
+                                                                                   owl:versionInfo 1.0 .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#battle_involves
+:battle_involves rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:domain :Battle ;
+                 rdfs:range <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#HouseClan> ;
+                 rdfs:comment "A battle must involve at least 2 or more house clans."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#battle_takes_place
+:battle_takes_place rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Battle ;
+                    rdfs:range <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Episode> ;
+                    rdfs:comment "A Battle takes place in a episode."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#belongs_to_kingdom
+:belongs_to_kingdom rdf:type owl:ObjectProperty ;
+                    rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#HouseClan> ;
+                    rdfs:range <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Kingdom> ;
+                    rdfs:comment "A house clan belongs to a kingdom"@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#casts
+:casts rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf owl:topObjectProperty ;
+       owl:inverseOf :is_cast_by ;
+       rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Person> ;
+       rdfs:range <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Character> ;
+       rdfs:comment "An actor casts or plays a character. The character appears in the episode of the series."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#character_in_episode
+:character_in_episode rdf:type owl:ObjectProperty ;
+                      rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Character> ;
+                      rdfs:range <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Episode> ;
+                      rdfs:comment "In which episosed apperas each character."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#dies_in
+:dies_in rdf:type owl:ObjectProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Character> ;
+         rdfs:range <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Episode> ;
+         rdfs:comment "In which episode dies a character"@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#episode_in_season
+:episode_in_season rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   owl:inverseOf :has_episode ;
+                   rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Episode> ;
+                   rdfs:range <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Season> .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#hasAuthor
+:hasAuthor rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :has_staff ;
+           rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Series> ;
+           rdfs:range <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Author> ;
+           rdfs:comment "The author of the series."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#hasDirector
+:hasDirector rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :has_staff ;
+             rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Series> ;
+             rdfs:range <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Director> ;
+             rdfs:comment "The director of the series."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_award
+:has_award rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Series> ;
+           rdfs:range <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Award> ;
+           rdfs:comment "A series may have recieved 0 or more prizes or awards."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_episode
+:has_episode rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Season> ;
+             rdfs:range <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Episode> ;
+             rdfs:comment "A season is comprised of one or more episodes."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_genre
+:has_genre rdf:type owl:ObjectProperty ;
+           rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Series> ;
+           rdfs:range <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Genre> ;
+           rdfs:comment "A series must have one or more genre that define the type of content."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_season
+:has_season rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Series> ;
+            rdfs:range <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Season> ;
+            rdfs:comment "A series is comprised of several parts called seasons."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_staff
+:has_staff rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Series> ;
+           rdfs:range [ rdf:type owl:Class ;
+                        owl:unionOf ( <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Author>
+                                      <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Director>
+                                      <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#ScreenWriter>
+                                    )
+                      ] ;
+           rdfs:comment "The staff that works as in a series which are not actors."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_winner
+:has_winner rdf:type owl:ObjectProperty ;
+            rdfs:domain :Battle ;
+            rdfs:range <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#HouseClan> ;
+            rdfs:comment "A battle has some house clans as winners."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#is_broadcast_in
+:is_broadcast_in rdf:type owl:ObjectProperty ;
+                 rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Series> ;
+                 rdfs:range <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Platform> ;
+                 rdfs:comment "A series may be broadcast in 0 or more media or platform."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#is_cast_by
+:is_cast_by rdf:type owl:ObjectProperty ;
+            rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Character> ;
+            rdfs:range <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Person> .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#season_recorded_in
+:season_recorded_in rdf:type owl:ObjectProperty ;
+                    rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Season> ;
+                    rdfs:range <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Country> ;
+                    rdfs:comment "In Game of Thrones, the seasons are recorded in different regions or countries."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#series_translated_in
+:series_translated_in rdf:type owl:ObjectProperty ;
+                      rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Series> ;
+                      rdfs:range <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Language> ;
+                      rdfs:comment "A series may be translated in 1 or more languages."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#uses_weaponery
+:uses_weaponery rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain :Battle ;
+                rdfs:range <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Weapon> ;
+                rdfs:comment "A battle uses specific weaponery."@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#died
+:died rdf:type owl:DatatypeProperty ,
+               owl:FunctionalProperty ;
+      rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Person> ;
+      rdfs:range xsd:dateTime ;
+      rdfs:comment "The date in which the physical person dies or the character dissapears from the series."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_award_name
+:has_award_name rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Award> ;
+                rdfs:range xsd:string ;
+                rdfs:comment "The name or description of an award."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_award_year
+:has_award_year rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Award> ;
+                rdfs:range xsd:unsignedInt .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_battle_description
+:has_battle_description rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :Battle ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "The name or description of a battle."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_budget
+:has_budget rdf:type owl:DatatypeProperty ;
+            rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Season> ;
+            rdfs:range xsd:int ;
+            rdfs:comment "The budget associated to each season. The amount is given in millions of US dollars."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_character_description
+:has_character_description rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf owl:topDataProperty ;
+                           rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Character> ;
+                           rdfs:range xsd:string ;
+                           rdfs:comment "Further description of the character besides its fullname given by the property hasPersonName."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_country_code
+:has_country_code rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Country> ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "The name or description of a country."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_duration
+:has_duration rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Episode> ;
+              rdfs:range xsd:unsignedInt ;
+              rdfs:comment "The duration of an episode in minutes."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_genre_name
+:has_genre_name rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Genre> ;
+                rdfs:range xsd:string ;
+                rdfs:comment "The name or description of a genre."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_kingdom_name
+:has_kingdom_name rdf:type owl:DatatypeProperty ;
+                  rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Kingdom> ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "The name or description of a kingdom."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_language_code
+:has_language_code rdf:type owl:DatatypeProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Language> ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_order
+:has_order rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Part> ;
+           rdfs:range xsd:unsignedInt ;
+           rdfs:comment "The ordinal position of the part in a sequence."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_part_title
+:has_part_title rdf:type owl:DatatypeProperty ;
+                rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Part> ;
+                rdfs:range xsd:string ;
+                rdfs:comment "The title of a season or episode"@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_person_name
+:has_person_name rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Person> ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "The fullname of a person or character."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_plot
+:has_plot rdf:type owl:DatatypeProperty ;
+          rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Episode> ;
+          rdfs:range xsd:string ;
+          rdfs:comment "The detailed description of an episode."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_score
+:has_score rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Season> ;
+           rdfs:range [ rdf:type rdfs:Datatype ;
+                        owl:onDatatype xsd:int ;
+                        owl:withRestrictions ( [ xsd:minInclusive "0"^^xsd:int
+                                               ]
+                                               [ xsd:maxInclusive "10"^^xsd:int
+                                               ]
+                                             )
+                      ] ;
+           rdfs:comment """Every series has a relative score given between 0 and 10.
+We apply a restriction on this property in order to fullfill this range restriction."""@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_series_title
+:has_series_title rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Series> ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "The title of the series"@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_views
+:has_views rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Episode> ;
+           rdfs:range xsd:float ;
+           rdfs:comment "The number of views of an episode in millions."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_weapon_name
+:has_weapon_name rdf:type owl:DatatypeProperty ;
+                 rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Weapon> ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "The name or description of the weapon."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_weapon_strength
+:has_weapon_strength rdf:type owl:DatatypeProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Weapon> ;
+                     rdfs:range [ rdf:type rdfs:Datatype ;
+                                  owl:onDatatype xsd:int ;
+                                  owl:withRestrictions ( [ xsd:minInclusive "0"^^xsd:int
+                                                         ]
+                                                         [ xsd:maxInclusive "100"^^xsd:int
+                                                         ]
+                                                       )
+                                ] ;
+                     rdfs:comment "The strength of a weapon is measured in percentage, i.e. an integer from 0 to 100."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#was_born
+:was_born rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Person> ;
+          rdfs:range xsd:dateTime ;
+          rdfs:comment "The date in which a physical person is born or a character is created."@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#AnimalWeapon
+:AnimalWeapon rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Weapon> ;
+              owl:disjointWith :MaterialWeapon ;
+              rdfs:seeAlso "A weapon based on an animal attack, such as dragons."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#Battle
+:Battle rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :battle_involves ;
+                          owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                          owl:onClass <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#HouseClan>
+                        ] ;
+        rdfs:comment "In an episode, it appears some battle which involves different clans on either side."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#EmmyAward
+:EmmyAward rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Award> ;
+           rdfs:comment "The Emmy is a special type of award."@en ;
+           rdfs:seeAlso "https://en.wikipedia.org/wiki/Primetime_Emmy_Award_for_Outstanding_Drama_Series"@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#EmmyAwardedSeries
+:EmmyAwardedSeries rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Series>
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :has_award ;
+                                                                owl:someValuesFrom :EmmyAward
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   rdfs:seeAlso "Series that have been awarded at least one Emmy"@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#MaterialWeapon
+:MaterialWeapon rdf:type owl:Class ;
+                rdfs:subClassOf <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Weapon> ;
+                rdfs:seeAlso "A weapon made from material, e.g. arrows."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#SpainRecordedEpisode
+:SpainRecordedEpisode rdf:type owl:Class ;
+                      rdfs:subClassOf <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Episode> ;
+                      rdfs:comment "An episode that belongs to a season which has been recorded in Spain."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Actor
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Actor> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Person> ;
+                                                                                          rdfs:comment "An actor is the real physical person that casts a role or character in a series' episode."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Author
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Author> rdf:type owl:Class ;
+                                                                                           rdfs:subClassOf <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Person> ;
+                                                                                           rdfs:comment "The author of a series is the person who invented and wrote the series."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Award
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Award> rdf:type owl:Class ;
+                                                                                          rdfs:comment "An award is a prize given to a series."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Character
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Character> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                                owl:onProperty :is_cast_by ;
+                                                                                                                owl:allValuesFrom <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Actor>
+                                                                                                              ] ;
+                                                                                              rdfs:comment "A character is a role in the series which is cast by an actor."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Country
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Country> rdf:type owl:Class ;
+                                                                                            rdfs:comment """The entity Country is used to link the geographical region in which every season is recorded.
+This class shall be defined as an extensive enumeration of instances."""@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Director
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Director> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Person> ;
+                                                                                             rdfs:comment "The director of a series is the person responsible for the sucessful development of the work. It can be regarded as the project manager of the project."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Episode
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Episode> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Part> ;
+                                                                                            owl:disjointWith <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Season> ;
+                                                                                            rdfs:comment "Episode is a development of some story in a fixed amount of time. Episodes, like seasons, are presented in a given order."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Genre
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Genre> rdf:type owl:Class ;
+                                                                                          rdfs:comment "Every series has some type of content refered as genre."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#HouseClan
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#HouseClan> rdf:type owl:Class ;
+                                                                                              rdfs:comment "In the series Game of Thrones, every Kingdom has several family houses or clans. This entity is devoted to model these clans."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Kingdom
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Kingdom> rdf:type owl:Class ;
+                                                                                            rdfs:comment """In the series Game of Thrones, the basic geospatial organization is a Kingdom. Several kingdoms are in continuous war in order to achieve power.
+In addition, a Kingdom may contain one or several house clans."""@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Language
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Language> rdf:type owl:Class ;
+                                                                                             rdfs:comment "A series is translated into one or more languages. The entity language is defined as a set of instances."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#LongEpisode
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#LongEpisode> rdf:type owl:Class ;
+                                                                                                rdfs:subClassOf <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Episode> ;
+                                                                                                rdfs:comment "A long episode is an episode longer than 60 minutes."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#MainCharacter
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#MainCharacter> rdf:type owl:Class ;
+                                                                                                  owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Character>
+                                                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                                                               owl:onProperty :character_in_episode ;
+                                                                                                                                               owl:minQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
+                                                                                                                                               owl:onClass <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Episode>
+                                                                                                                                             ]
+                                                                                                                                           ) ;
+                                                                                                                        rdf:type owl:Class
+                                                                                                                      ] ;
+                                                                                                  rdfs:seeAlso "The main actor is the person who appears is most of the episodes."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Part
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Part> rdf:type owl:Class ;
+                                                                                         rdfs:comment "A Part is an abstract class that denotes a Season or Episode of a series."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Person
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Person> rdf:type owl:Class ;
+                                                                                           rdfs:comment "Person is an abstract class which represents a physical object."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Platform
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Platform> rdf:type owl:Class ;
+                                                                                             rdfs:comment "A platform is a means by which a series is broadcast to the audience. Further subclasses specialize this concept."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#RecurringCharacter
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#RecurringCharacter> rdf:type owl:Class ;
+                                                                                                       owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Character>
+                                                                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                                                                    owl:onProperty :character_in_episode ;
+                                                                                                                                                    owl:minQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+                                                                                                                                                    owl:onClass <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Episode>
+                                                                                                                                                  ]
+                                                                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                                                                    owl:onProperty :character_in_episode ;
+                                                                                                                                                    owl:maxQualifiedCardinality "9"^^xsd:nonNegativeInteger ;
+                                                                                                                                                    owl:onClass <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Episode>
+                                                                                                                                                  ]
+                                                                                                                                                ) ;
+                                                                                                                             rdf:type owl:Class
+                                                                                                                           ] ;
+                                                                                                       rdfs:seeAlso "A recurring actor is a person that apears is some of the episodes."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#ScreenWriter
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#ScreenWriter> rdf:type owl:Class ;
+                                                                                                 rdfs:subClassOf <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Person> ;
+                                                                                                 rdfs:comment "The screen writer is the person which usually adapts the story written by the author into the format of episodes. In addition, he writes the script that the actors must cast."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Season
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Season> rdf:type owl:Class ;
+                                                                                           rdfs:subClassOf <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Part> ,
+                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                             owl:onProperty :has_episode ;
+                                                                                                             owl:someValuesFrom <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Episode>
+                                                                                                           ] ,
+                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                             owl:onProperty :season_recorded_in ;
+                                                                                                             owl:someValuesFrom <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Country>
+                                                                                                           ] ;
+                                                                                           rdfs:comment "Season consists of a set of episodes of a series. Episodes, like seasons, are presented in a given order."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Series
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Series> rdf:type owl:Class ;
+                                                                                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                             owl:onProperty :has_genre ;
+                                                                                                             owl:someValuesFrom <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Genre>
+                                                                                                           ] ,
+                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                             owl:onProperty :series_translated_in ;
+                                                                                                             owl:someValuesFrom <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Language>
+                                                                                                           ] ;
+                                                                                           rdfs:comment "A series is a piece of artistic work that involves a set of people, has a set of genre and is broadcast to the audience in several languages and media supports. This is the main class of the ontology developed in this work."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#SporadicCharacter
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#SporadicCharacter> rdf:type owl:Class ;
+                                                                                                      owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Character>
+                                                                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                                                                   owl:onProperty :character_in_episode ;
+                                                                                                                                                   owl:maxQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                                                                                                                   owl:onClass <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Episode>
+                                                                                                                                                 ]
+                                                                                                                                               ) ;
+                                                                                                                            rdf:type owl:Class
+                                                                                                                          ] ;
+                                                                                                      rdfs:seeAlso "An sporadic actor is a person that solely appears in one or a few episodes, sometimes as a guest actor."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#TVChannel
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#TVChannel> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Platform> ;
+                                                                                              rdfs:seeAlso "The TVChannel entity in which the series is broadcast."@en .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Weapon
+<http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Weapon> rdf:type owl:Class ;
+                                                                                           owl:disjointUnionOf ( :AnimalWeapon
+                                                                                                                 :MaterialWeapon
+                                                                                                               ) ;
+                                                                                           rdfs:comment "In the numerous battles in the series Game of Thrones, diferent types of weapons are used. In particular, there are weapons based on animals, such as dragons, and material-like ones like arrows."@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#adventure
+:adventure rdf:type owl:NamedIndividual ,
+                    <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Genre> ;
+           :has_genre_name "Adventure" .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#emmy_2019
+:emmy_2019 rdf:type owl:NamedIndividual ,
+                    :EmmyAward ;
+           :has_award_year "2019"^^xsd:unsignedInt .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#episode01_01
+:episode01_01 rdf:type owl:NamedIndividual ,
+                       <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Episode> ;
+              :has_duration "70"^^xsd:unsignedInt .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#gameOfThrones
+:gameOfThrones rdf:type owl:NamedIndividual ,
+                        <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Series> ;
+               :has_award :emmy_2019 .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#season01
+:season01 rdf:type owl:NamedIndividual ,
+                   <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Season> ;
+          :has_episode :episode01_01 ;
+          :season_recorded_in :spain ;
+          :has_part_title "The first season" .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#season02
+:season02 rdf:type owl:NamedIndividual ,
+                   <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Season> ;
+          :has_score "10"^^xsd:int .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#spain
+:spain rdf:type owl:NamedIndividual ,
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Country> ;
+       :has_country_code "es" .
+
+
+###  http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#spanish
+:spanish rdf:type owl:NamedIndividual ,
+                  <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Language> ;
+         :has_language_code "es-ES" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Battle
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Award>
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Character>
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Country>
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Genre>
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#HouseClan>
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Kingdom>
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Language>
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Part>
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Person>
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Platform>
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Series>
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Weapon>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Battle
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Award>
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Country>
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Genre>
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#HouseClan>
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Kingdom>
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Language>
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Person>
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Platform>
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Series>
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Weapon>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#MainCharacter>
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#RecurringCharacter>
+                <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#SporadicCharacter>
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+:s rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:c rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:cc rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:e rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:d rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Classifies episodes into long ones if duration is greater than 60 minutes." ;
+   rdfs:label "longEpisodeDef" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :has_duration ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :e ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :d
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first :d ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 60 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Episode> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :e
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#LongEpisode> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :e
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Classify episodes in a season recorded in spain as spanish episodes" ;
+   rdfs:label "spainRecordedEpisodeDef" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :season_recorded_in ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :s ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :c
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :has_country_code ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :cc
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :has_episode ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :s ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :e
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#startsWith> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first :cc ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first "es" ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Season> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :s
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :SpainRecordedEpisode ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :e
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Classify episodes in a season recorded in spain as spanish episodes" ;
+   rdfs:label "spainRecordedEpisodeQuery" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :season_recorded_in ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :s ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :c
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :has_country_code ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :cc
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :has_episode ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :s ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :e
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#startsWith> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first :cc ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first "es" ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Season> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :s
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#builtin> <http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select> ;
+                                                       <http://www.w3.org/2003/11/swrl#arguments> ( :s
+                                                                                                    :e
+                                                                                                  )
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
