@@ -3,9 +3,13 @@
     "EmmyAward" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#EmmyAward"
     },
-    "died" : {
-      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#died",
-      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    "is_character_alive" : {
+      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#is_character_alive",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "has_role" : {
+      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_role",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "ScreenWriter" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#ScreenWriter"
@@ -62,8 +66,9 @@
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_budget",
       "@type" : "http://www.w3.org/2001/XMLSchema#int"
     },
-    "SpainRecordedEpisode" : {
-      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#SpainRecordedEpisode"
+    "has_author" : {
+      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_author",
+      "@type" : "@id"
     },
     "battle_involves" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#battle_involves",
@@ -74,6 +79,14 @@
     },
     "Character" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Character"
+    },
+    "is_author_of" : {
+      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#is_author_of",
+      "@type" : "@id"
+    },
+    "broadcasts" : {
+      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#broadcasts",
+      "@type" : "@id"
     },
     "character_in_episode" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#character_in_episode",
@@ -88,10 +101,6 @@
     },
     "has_score" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_score"
-    },
-    "has_winner" : {
-      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_winner",
-      "@type" : "@id"
     },
     "Episode" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Episode"
@@ -113,6 +122,10 @@
     "Award" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Award"
     },
+    "episode_has_battle" : {
+      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#episode_has_battle",
+      "@type" : "@id"
+    },
     "SporadicCharacter" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#SporadicCharacter"
     },
@@ -122,18 +135,6 @@
     "has_battle_description" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_battle_description",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "topObjectProperty" : {
-      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
-      "@type" : "@id"
-    },
-    "has_series_title" : {
-      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_series_title",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "hasAuthor" : {
-      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#hasAuthor",
-      "@type" : "@id"
     },
     "Battle" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#Battle"
@@ -145,9 +146,17 @@
     "HouseClan" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#HouseClan"
     },
+    "award_to_series" : {
+      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#award_to_series",
+      "@type" : "@id"
+    },
     "has_weapon_name" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_weapon_name",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "kingdom_has_houseclan" : {
+      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#kingdom_has_houseclan",
+      "@type" : "@id"
     },
     "Part" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Part"
@@ -156,13 +165,19 @@
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#is_cast_by",
       "@type" : "@id"
     },
+    "country_has_season" : {
+      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#country_has_season",
+      "@type" : "@id"
+    },
     "has_character_description" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_character_description",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "has_country_code" : {
-      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_country_code",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_country_code"
+    },
+    "SpainRecordedSeason" : {
+      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#SpainRecordedSeason"
     },
     "casts" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#casts",
@@ -170,6 +185,10 @@
     },
     "has_award" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_award",
+      "@type" : "@id"
+    },
+    "has_director" : {
+      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_director",
       "@type" : "@id"
     },
     "has_award_name" : {
@@ -202,8 +221,8 @@
     "LongEpisode" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#LongEpisode"
     },
-    "hasDirector" : {
-      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#hasDirector",
+    "episode_has_deathof" : {
+      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#episode_has_deathof",
       "@type" : "@id"
     },
     "Language" : {
@@ -212,12 +231,28 @@
     "EmmyAwardedSeries" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#EmmyAwardedSeries"
     },
+    "is_director_of" : {
+      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#is_director_of",
+      "@type" : "@id"
+    },
     "has_order" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_order",
       "@type" : "http://www.w3.org/2001/XMLSchema#unsignedInt"
     },
     "AnimalWeapon" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#AnimalWeapon"
+    },
+    "staff_in_series" : {
+      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#staff_in_series",
+      "@type" : "@id"
+    },
+    "is_season_of" : {
+      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#is_season_of",
+      "@type" : "@id"
+    },
+    "episode_has_character" : {
+      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#episode_has_character",
+      "@type" : "@id"
     },
     "has_season" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_season",
@@ -226,6 +261,9 @@
     "has_views" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_views",
       "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
@@ -245,12 +283,12 @@
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#is_broadcast_in",
       "@type" : "@id"
     },
-    "has_plot" : {
-      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_plot",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
     "dies_in" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#dies_in",
+      "@type" : "@id"
+    },
+    "is_genre_of" : {
+      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#is_genre_of",
       "@type" : "@id"
     },
     "RecurringCharacter" : {
@@ -263,12 +301,12 @@
     "Season" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Season"
     },
-    "has_part_title" : {
-      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_part_title",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
     "belongs_to_kingdom" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#belongs_to_kingdom",
+      "@type" : "@id"
+    },
+    "weapon_in_battle" : {
+      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#weapon_in_battle",
       "@type" : "@id"
     }
   }
