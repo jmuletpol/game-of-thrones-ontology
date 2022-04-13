@@ -8,24 +8,23 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:purl="http://purl.org/dc/terms/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:gameofthronesontology="https://w3id.org/def/gameofthronesontology#">
     <owl:Ontology rdf:about="https://w3id.org/def/gameofthronesontology">
-        <owl:versionIRI rdf:resource="https://w3id.org/def/gameofthronesontology/1.0"/>
-        <purl:author>Josep Mulet Pol</purl:author>
-        <purl:author>Mónica Mongay</purl:author>
-        <purl:creationDate>2022/04/12</purl:creationDate>
-        <purl:creator>Josep Mulet Pol</purl:creator>
-        <purl:creator>Mónica Mongay</purl:creator>
-        <purl:description xml:lang="en">This work is intented to model information about TV series, in particular, we will work on an ontology based on the TV series Game of Thrones. Game of Thrones is the television series created by HBO that adapts the novel saga the Song of Ice and Fire, by George R.R. Martin. The story describes the fight for a throne, the iron throne, forged with the swords of defeated enemies. Seven are the kingdoms of the West and many are the houses that will contest the crown: the heirs, the exiles, the dispossessed and the current regents.
+        <dcterms:author>Josep Mulet Pol</dcterms:author>
+        <dcterms:author>Mónica Mongay</dcterms:author>
+        <dcterms:creationDate>2022/04/12</dcterms:creationDate>
+        <dcterms:creator>Josep Mulet Pol</dcterms:creator>
+        <dcterms:creator>Mónica Mongay</dcterms:creator>
+        <dcterms:description xml:lang="en">This work is intented to model information about TV series, in particular, we will work on an ontology based on the TV series Game of Thrones. Game of Thrones is the television series created by HBO that adapts the novel saga the Song of Ice and Fire, by George R.R. Martin. The story describes the fight for a throne, the iron throne, forged with the swords of defeated enemies. Seven are the kingdoms of the West and many are the houses that will contest the crown: the heirs, the exiles, the dispossessed and the current regents.
 
-This work is part of the assignment PAC2 of the subject &quot;Representació del coneixement&quot; of the UOC (Universitat Oberta de Catalunya). Spring edition 2021-22/2.</purl:description>
-        <purl:license>Creative Commons 2.0</purl:license>
-        <purl:title>Game of thrones ontology</purl:title>
+This work is part of the assignment PAC2 of the subject &quot;Representació del coneixement&quot; of the UOC (Universitat Oberta de Catalunya). Spring edition 2021-22/2.</dcterms:description>
+        <dcterms:license>Creative Commons 2.0</dcterms:license>
+        <dcterms:title>Game of thrones ontology</dcterms:title>
         <rdfs:comment xml:lang="en">This work is intented to model information about TV series, in particular, we will work on an ontology based on the TV series Game of Thrones. Game of Thrones is the television series created by HBO that adapts the novel saga the Song of Ice and Fire, by George R.R. Martin. The story describes the fight for a throne, the iron throne, forged with the swords of defeated enemies. Seven are the kingdoms of the West and many are the houses that will contest the crown: the heirs, the exiles, the dispossessed and the current regents.
 
 This work is part of the assignment PAC2 of the subject &quot;Representació del coneixement&quot; of the UOC (Universitat Oberta de Catalunya). Spring edition 2021-22/2.</rdfs:comment>
@@ -2955,22 +2954,22 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#e">
+    <rdf:Description rdf:about="http://w3id.org/def/gameofthronesontology#e">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#d">
+    <rdf:Description rdf:about="http://w3id.org/def/gameofthronesontology#d">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#c">
+    <rdf:Description rdf:about="http://w3id.org/def/gameofthronesontology#c">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#cc">
+    <rdf:Description rdf:about="http://w3id.org/def/gameofthronesontology#cc">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#s">
+    <rdf:Description rdf:about="http://w3id.org/def/gameofthronesontology#s">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#w">
+    <rdf:Description rdf:about="http://w3id.org/def/gameofthronesontology#w">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description>
@@ -2985,7 +2984,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="https://w3id.org/def/gameofthronesontology.0#Episode"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#e"/>
+                        <swrl:argument1 rdf:resource="http://w3id.org/def/gameofthronesontology#e"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -2995,8 +2994,8 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                                 <swrl:propertyPredicate rdf:resource="https://w3id.org/def/gameofthronesontology#has_duration"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#e"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#d"/>
+                                <swrl:argument1 rdf:resource="http://w3id.org/def/gameofthronesontology#e"/>
+                                <swrl:argument2 rdf:resource="http://w3id.org/def/gameofthronesontology#d"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -3009,7 +3008,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
                                         <swrl:arguments>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#d"/>
+                                                <rdf:first rdf:resource="http://w3id.org/def/gameofthronesontology#d"/>
                                                 <rdf:rest>
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -3035,7 +3034,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="https://w3id.org/def/gameofthronesontology.0#LongEpisode"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#e"/>
+                        <swrl:argument1 rdf:resource="http://w3id.org/def/gameofthronesontology#e"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -3054,8 +3053,8 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="https://w3id.org/def/gameofthronesontology#has_country_code"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#c"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#cc"/>
+                        <swrl:argument1 rdf:resource="http://w3id.org/def/gameofthronesontology#c"/>
+                        <swrl:argument2 rdf:resource="http://w3id.org/def/gameofthronesontology#cc"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -3065,8 +3064,8 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                 <swrl:propertyPredicate rdf:resource="https://w3id.org/def/gameofthronesontology#season_recorded_in"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#s"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#c"/>
+                                <swrl:argument1 rdf:resource="http://w3id.org/def/gameofthronesontology#s"/>
+                                <swrl:argument2 rdf:resource="http://w3id.org/def/gameofthronesontology#c"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -3076,7 +3075,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                         <swrl:classPredicate rdf:resource="https://w3id.org/def/gameofthronesontology.0#Season"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#s"/>
+                                        <swrl:argument1 rdf:resource="http://w3id.org/def/gameofthronesontology#s"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -3089,7 +3088,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
                                                 <swrl:arguments>
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#cc"/>
+                                                        <rdf:first rdf:resource="http://w3id.org/def/gameofthronesontology#cc"/>
                                                         <rdf:rest>
                                                             <rdf:Description>
                                                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -3117,7 +3116,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="https://w3id.org/def/gameofthronesontology#SpainRecordedSeason"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#s"/>
+                        <swrl:argument1 rdf:resource="http://w3id.org/def/gameofthronesontology#s"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -3136,8 +3135,8 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="https://w3id.org/def/gameofthronesontology#has_country_code"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#c"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#cc"/>
+                        <swrl:argument1 rdf:resource="http://w3id.org/def/gameofthronesontology#c"/>
+                        <swrl:argument2 rdf:resource="http://w3id.org/def/gameofthronesontology#cc"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -3147,8 +3146,8 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                 <swrl:propertyPredicate rdf:resource="https://w3id.org/def/gameofthronesontology#season_recorded_in"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#s"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#c"/>
+                                <swrl:argument1 rdf:resource="http://w3id.org/def/gameofthronesontology#s"/>
+                                <swrl:argument2 rdf:resource="http://w3id.org/def/gameofthronesontology#c"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -3158,7 +3157,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                         <swrl:classPredicate rdf:resource="https://w3id.org/def/gameofthronesontology.0#Season"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#s"/>
+                                        <swrl:argument1 rdf:resource="http://w3id.org/def/gameofthronesontology#s"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -3171,7 +3170,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
                                                 <swrl:arguments>
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#cc"/>
+                                                        <rdf:first rdf:resource="http://w3id.org/def/gameofthronesontology#cc"/>
                                                         <rdf:rest>
                                                             <rdf:Description>
                                                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -3200,7 +3199,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
                         <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
                         <swrl:arguments rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#s"/>
+                            <rdf:Description rdf:about="http://w3id.org/def/gameofthronesontology#s"/>
                         </swrl:arguments>
                     </rdf:Description>
                 </rdf:first>
@@ -3220,7 +3219,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="https://w3id.org/def/gameofthronesontology.0#Weapon"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#w"/>
+                        <swrl:argument1 rdf:resource="http://w3id.org/def/gameofthronesontology#w"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -3230,8 +3229,8 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                                 <swrl:propertyPredicate rdf:resource="https://w3id.org/def/gameofthronesontology#has_weapon_strength"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#w"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#s"/>
+                                <swrl:argument1 rdf:resource="http://w3id.org/def/gameofthronesontology#w"/>
+                                <swrl:argument2 rdf:resource="http://w3id.org/def/gameofthronesontology#s"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -3244,7 +3243,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
                                         <swrl:arguments>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#s"/>
+                                                <rdf:first rdf:resource="http://w3id.org/def/gameofthronesontology#s"/>
                                                 <rdf:rest>
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -3270,7 +3269,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="https://w3id.org/def/gameofthronesontology#LethalWeapon"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#w"/>
+                        <swrl:argument1 rdf:resource="http://w3id.org/def/gameofthronesontology#w"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -3289,7 +3288,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="https://w3id.org/def/gameofthronesontology.0#Weapon"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#w"/>
+                        <swrl:argument1 rdf:resource="http://w3id.org/def/gameofthronesontology#w"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -3299,8 +3298,8 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                                 <swrl:propertyPredicate rdf:resource="https://w3id.org/def/gameofthronesontology#has_weapon_strength"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#w"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#s"/>
+                                <swrl:argument1 rdf:resource="http://w3id.org/def/gameofthronesontology#w"/>
+                                <swrl:argument2 rdf:resource="http://w3id.org/def/gameofthronesontology#s"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -3313,7 +3312,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
                                         <swrl:arguments>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#s"/>
+                                                <rdf:first rdf:resource="http://w3id.org/def/gameofthronesontology#s"/>
                                                 <rdf:rest>
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -3340,8 +3339,8 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
                         <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
                         <swrl:arguments rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#w"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#s"/>
+                            <rdf:Description rdf:about="http://w3id.org/def/gameofthronesontology#w"/>
+                            <rdf:Description rdf:about="http://w3id.org/def/gameofthronesontology#s"/>
                         </swrl:arguments>
                     </rdf:Description>
                 </rdf:first>
