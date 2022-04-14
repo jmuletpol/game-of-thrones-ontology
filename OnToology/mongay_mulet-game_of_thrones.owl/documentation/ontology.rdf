@@ -11,7 +11,7 @@
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:game_of_thrones_ontology-1="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0">
-        <rdfs:comment xml:lang="en">This work is intented to model information about TV series, in particular, we will work on an ontology based on the TV series Game of Thrones. Game of Thrones is the television series created by HBO that adapts the novel saga the Song of Ice and Fire, by George R.R. Martin. The story describes the struggle for a throne, the iron throne, forged with the swords of defeated enemies. Seven are the kingdoms of the West and many are the houses that will contest the crown: the heirs, the exiles, the dispossessed and the current regents.
+        <rdfs:comment xml:lang="en">This work is intented to model information about TV series, in particular, we will work on an ontology based on the TV series Game of Thrones. Game of Thrones is the television series created by HBO that adapts the novel saga the Song of Ice and Fire, by George R.R. Martin. The story describes the fight for a throne, the iron throne, forged with the swords of defeated enemies. Seven are the kingdoms of the West and many are the houses that will contest the crown: the heirs, the exiles, the dispossessed and the current regents.
 
 This work is part of the assignment PAC2 of the subject &quot;Representació del coneixement&quot; of the UOC (Universitat Oberta de Catalunya). Spring edition 2021-22/2.
 
@@ -79,6 +79,7 @@ Authors:
 
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#battle_involves">
+        <owl:inverseOf rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#houseclan_takes_part_in_battle"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#Battle"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#HouseClan"/>
         <rdfs:comment xml:lang="en">A battle must involve at least 2 or more house clans.</rdfs:comment>
@@ -426,6 +427,7 @@ Authors:
 
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#series_translated_in">
+        <owl:inverseOf rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#language_in_serie"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Series"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Language"/>
         <rdfs:comment xml:lang="en">A series may be translated in 1 or more languages.</rdfs:comment>
@@ -475,6 +477,30 @@ Authors:
         <rdfs:range rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#Battle"/>
         <rdfs:comment>The inverse property of uses_weaponery</rdfs:comment>
         <rdfs:label>weapon_in_battle</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://es.dbpedia.org/page/Game_of_Thrones#houseclan_takes_part_in_battle -->
+
+
+    <owl:ObjectProperty rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#houseclan_takes_part_in_battle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#HouseClan"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#Battle"/>
+        <rdfs:comment>The inverse property of battle_involves</rdfs:comment>
+        <rdfs:label>houseclan_takes_part_in_batte</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://es.dbpedia.org/page/Game_of_Thrones#language_in_serie -->
+
+
+    <owl:ObjectProperty rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#language_in_serie">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Language"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Series"/>
+        <rdfs:comment>The inverse property of series_translated_in</rdfs:comment>
+        <rdfs:label>language_in_serie</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -558,6 +584,8 @@ Authors:
 
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_country_code">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Country"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The 2 letter code of a country</rdfs:comment>
         <rdfs:label>has_country_code</rdfs:label>
     </owl:DatatypeProperty>
@@ -833,6 +861,17 @@ We apply a restriction on this property in order to fullfill this range restrict
         </owl:equivalentClass>
         <rdfs:comment xml:lang="en">Series that have been awarded at least one Emmy</rdfs:comment>
         <rdfs:label>EmmyAwardedSeries</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#LethalWeapon -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#LethalWeapon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Weapon"/>
+        <rdfs:comment xml:lang="en">A weapon is classified as lethal if has a stregth greater than 99%.</rdfs:comment>
+        <rdfs:label>LethalWeapon</rdfs:label>
     </owl:Class>
     
 
@@ -1147,11 +1186,22 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Character"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#character_in_episode"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
-                        <owl:onClass rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Episode"/>
-                    </owl:Restriction>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_role"/>
+                                <owl:hasValue>main</owl:hasValue>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_role"/>
+                                <owl:hasValue>secondary</owl:hasValue>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -1176,10 +1226,6 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
 
     <owl:Class rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Weapon">
-        <owl:disjointUnionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#AnimalWeapon"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#MaterialWeapon"/>
-        </owl:disjointUnionOf>
         <rdfs:comment xml:lang="en">In the numerous battles in the series Game of Thrones, diferent types of weapons are used. In particular, there are weapons based on animals, such as dragons, and material-like ones like arrows.</rdfs:comment>
         <rdfs:label>Weapon</rdfs:label>
     </owl:Class>
@@ -1213,6 +1259,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#canada">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Country"/>
+        <has_country_code>ca</has_country_code>
     </owl:NamedIndividual>
     
 
@@ -1231,6 +1278,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#croatia">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Country"/>
+        <has_country_code>cr</has_country_code>
     </owl:NamedIndividual>
     
 
@@ -1240,6 +1288,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#emmy_2019">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#EmmyAward"/>
+        <has_award_name>Emmy</has_award_name>
         <has_award_year rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2019</has_award_year>
     </owl:NamedIndividual>
     
@@ -1314,6 +1363,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#greece">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Country"/>
+        <has_country_code>gr</has_country_code>
     </owl:NamedIndividual>
     
 
@@ -1323,6 +1373,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#iceland">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Country"/>
+        <has_country_code>ic</has_country_code>
     </owl:NamedIndividual>
     
 
@@ -1341,6 +1392,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#italy">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Country"/>
+        <has_country_code>it</has_country_code>
     </owl:NamedIndividual>
     
 
@@ -1354,18 +1406,12 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#mainRole -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#mainRole"/>
-    
-
-
     <!-- http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#malta -->
 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#malta">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Country"/>
+        <has_country_code>mt</has_country_code>
     </owl:NamedIndividual>
     
 
@@ -1375,14 +1421,8 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#morocco">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Country"/>
+        <has_country_code>ma</has_country_code>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#otherRole -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#otherRole"/>
     
 
 
@@ -1515,13 +1555,6 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#secondaryRole -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#secondaryRole"/>
-    
-
-
     <!-- http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#spain -->
 
 
@@ -1559,6 +1592,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Alan_Taylor">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Director"/>
+        <has_person_name>Alan Taylor</has_person_name>
     </owl:NamedIndividual>
     
 
@@ -1568,6 +1602,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Alex_Graves">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Director"/>
+        <has_person_name>Alex Graves</has_person_name>
     </owl:NamedIndividual>
     
 
@@ -1583,7 +1618,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
         <character_in_episode rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#episode02_06"/>
         <character_in_episode rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#episode03_02"/>
         <is_cast_by rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#Maisie_Williams"/>
-        <has_character_description>Arya la assessina silenciosa</has_character_description>
+        <has_character_description>The silent killer</has_character_description>
         <has_role>main</has_role>
         <is_character_alive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_character_alive>
     </owl:NamedIndividual>
@@ -1595,6 +1630,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Bryan_Cogman">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#ScreenWriter"/>
+        <has_person_name>Bryan Cogman</has_person_name>
     </owl:NamedIndividual>
     
 
@@ -1613,6 +1649,8 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
         <character_in_episode rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#episode05_03"/>
         <dies_in rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#episode07_05"/>
         <is_cast_by rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#Lena_Headey"/>
+        <has_character_description>The most poweful queen</has_character_description>
+        <has_role>main</has_role>
         <is_character_alive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_character_alive>
     </owl:NamedIndividual>
     
@@ -1634,6 +1672,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#D.B.Weiss">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#ScreenWriter"/>
+        <has_person_name>D.B Weiss</has_person_name>
     </owl:NamedIndividual>
     
 
@@ -1650,8 +1689,8 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
         <character_in_episode rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#episode08_05"/>
         <dies_in rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#episode08_05"/>
         <is_cast_by rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#Emilia_Clarke"/>
-        <has_character_description>Mare de tres poderosos dracs</has_character_description>
-        <has_role>secondary</has_role>
+        <has_character_description>Mother of three powerful dragons</has_character_description>
+        <has_role>main</has_role>
         <is_character_alive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_character_alive>
     </owl:NamedIndividual>
     
@@ -1662,6 +1701,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#David_Benioff">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#ScreenWriter"/>
+        <has_person_name>David Benioff</has_person_name>
     </owl:NamedIndividual>
     
 
@@ -1794,6 +1834,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#George_R.R.Martin">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Author"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#ScreenWriter"/>
+        <has_person_name>George R.R.Martin</has_person_name>
     </owl:NamedIndividual>
     
 
@@ -1818,7 +1859,8 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
         <character_in_episode rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#episode06_04"/>
         <dies_in rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#episode06_04"/>
         <is_cast_by rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#Nikolaj_Coster-Waldau"/>
-        <has_character_description>La mà dreta del rei</has_character_description>
+        <has_character_description>The king&apos;s right hand</has_character_description>
+        <has_role>main</has_role>
         <is_character_alive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_character_alive>
     </owl:NamedIndividual>
     
@@ -1829,6 +1871,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Jane_Espenson">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#ScreenWriter"/>
+        <has_person_name>Jane Espenson</has_person_name>
     </owl:NamedIndividual>
     
 
@@ -1838,6 +1881,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Jeremy_Podeswa">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Director"/>
+        <has_person_name>Jeremy Podeswa</has_person_name>
     </owl:NamedIndividual>
     
 
@@ -1853,7 +1897,8 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
         <character_in_episode rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#episode06_04"/>
         <character_in_episode rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#episode08_05"/>
         <is_cast_by rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#Kit_Harington"/>
-        <has_character_description>El rei del nord</has_character_description>
+        <has_character_description>The king of the north</has_character_description>
+        <has_role>main</has_role>
         <is_character_alive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_character_alive>
     </owl:NamedIndividual>
     
@@ -1864,6 +1909,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Kit_Harington">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Actor"/>
+        <has_person_name>Kit Harington</has_person_name>
         <was_born rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1986-12-26T00:00:00</was_born>
     </owl:NamedIndividual>
     
@@ -1874,6 +1920,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Lena_Headey">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Actor"/>
+        <has_person_name>Lena Headey</has_person_name>
         <was_born rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1973-10-03T00:00:00</was_born>
     </owl:NamedIndividual>
     
@@ -1884,6 +1931,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Maisie_Williams">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Actor"/>
+        <has_person_name>Maisie Williams</has_person_name>
         <was_born rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1997-04-15T00:00:00</was_born>
     </owl:NamedIndividual>
     
@@ -1894,6 +1942,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Mark_Mylod">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Director"/>
+        <has_person_name>Mark Mylod</has_person_name>
     </owl:NamedIndividual>
     
 
@@ -1903,6 +1952,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Nikolaj_Coster-Waldau">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Actor"/>
+        <has_person_name>Nikolaj Coster-Waldau</has_person_name>
         <was_born rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1970-07-27T00:00:00</was_born>
     </owl:NamedIndividual>
     
@@ -1920,7 +1970,8 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
         <character_in_episode rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#episode07_01"/>
         <dies_in rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#episode08_02"/>
         <is_cast_by rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#Richard_Brake"/>
-        <has_character_description>El rei de la nit</has_character_description>
+        <has_character_description>The king of the night</has_character_description>
+        <has_role>secondary</has_role>
         <is_character_alive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_character_alive>
     </owl:NamedIndividual>
     
@@ -1931,6 +1982,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Peter_Dinklage">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Actor"/>
+        <has_person_name>Peter Dinklage</has_person_name>
         <was_born rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1969-06-11T00:00:00</was_born>
     </owl:NamedIndividual>
     
@@ -1947,7 +1999,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
         <character_in_episode rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#episode04_02"/>
         <dies_in rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#episode04_02"/>
         <is_cast_by rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#Aidan_Gillen"/>
-        <has_character_description>Manipulador i interessat</has_character_description>
+        <has_character_description>Manipulator and interested</has_character_description>
         <has_role>secondary</has_role>
         <is_character_alive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_character_alive>
     </owl:NamedIndividual>
@@ -1970,6 +2022,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Richard_Brake">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Actor"/>
+        <has_person_name>Richard  Brake</has_person_name>
         <was_born rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1964-11-24T00:00:00</was_born>
     </owl:NamedIndividual>
     
@@ -1986,7 +2039,8 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
         <character_in_episode rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#episode05_04"/>
         <character_in_episode rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#episode06_02"/>
         <is_cast_by rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#Sophie_Turner"/>
-        <has_character_description>Sansa: empoderada i menyspreada a Invernalia</has_character_description>
+        <has_character_description>Empowered and despised in Invernalia</has_character_description>
+        <has_role>main</has_role>
         <is_character_alive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_character_alive>
     </owl:NamedIndividual>
     
@@ -1997,6 +2051,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Sophie_Turner">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Actor"/>
+        <has_person_name>Sophie Turner</has_person_name>
         <was_born rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1996-02-21T00:00:00</was_born>
     </owl:NamedIndividual>
     
@@ -2083,8 +2138,8 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
         <character_in_episode rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#episode05_03"/>
         <character_in_episode rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#episode07_05"/>
         <is_cast_by rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#Peter_Dinklage"/>
-        <has_character_description>El germà menyspreciat dels Lannister</has_character_description>
-        <has_role>other</has_role>
+        <has_character_description>The despised brother of the Lannisters</has_character_description>
+        <has_role>main</has_role>
         <is_character_alive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_character_alive>
     </owl:NamedIndividual>
     
@@ -2095,6 +2150,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Vanessa_Taylor">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#ScreenWriter"/>
+        <has_person_name>vanessa Taylor</has_person_name>
     </owl:NamedIndividual>
     
 
@@ -2108,8 +2164,8 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
         <character_in_episode rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#episode04_03"/>
         <dies_in rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#episode06_05"/>
         <is_cast_by rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#Conleth_Hill"/>
-        <has_character_description>Un diplomatic a les ordres de Daenerys</has_character_description>
-        <has_role>secondary</has_role>
+        <has_character_description>A diplomat under Daenerys</has_character_description>
+        <has_role>other</has_role>
         <is_character_alive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_character_alive>
     </owl:NamedIndividual>
     
@@ -2120,8 +2176,8 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Viserion">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#AnimalWeapon"/>
-        <has_weapon_name>Viserion</has_weapon_name>
-        <has_weapon_strength rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</has_weapon_strength>
+        <has_weapon_name>Dragon Viserion</has_weapon_name>
+        <has_weapon_strength rdf:datatype="http://www.w3.org/2001/XMLSchema#int">98</has_weapon_strength>
     </owl:NamedIndividual>
     
 
@@ -2141,6 +2197,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#arakh">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#MaterialWeapon"/>
+        <has_weapon_name>Arakh</has_weapon_name>
         <has_weapon_strength rdf:datatype="http://www.w3.org/2001/XMLSchema#int">87</has_weapon_strength>
     </owl:NamedIndividual>
     
@@ -2151,6 +2208,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#ax">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#MaterialWeapon"/>
+        <has_weapon_name>Ax</has_weapon_name>
         <has_weapon_strength rdf:datatype="http://www.w3.org/2001/XMLSchema#int">95</has_weapon_strength>
     </owl:NamedIndividual>
     
@@ -2216,6 +2274,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
         <uses_weaponery rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#ax"/>
         <uses_weaponery rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#dagger"/>
         <uses_weaponery rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#knife"/>
+        <uses_weaponery rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#valyrio_Fire"/>
         <has_battle_description>battleOfTheBastards</has_battle_description>
     </owl:NamedIndividual>
     
@@ -2241,6 +2300,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#crossbow">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#MaterialWeapon"/>
+        <has_weapon_name>Crossbow</has_weapon_name>
         <has_weapon_strength rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</has_weapon_strength>
     </owl:NamedIndividual>
     
@@ -2251,6 +2311,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#dagger">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#MaterialWeapon"/>
+        <has_weapon_name>Dagger</has_weapon_name>
         <has_weapon_strength rdf:datatype="http://www.w3.org/2001/XMLSchema#int">63</has_weapon_strength>
     </owl:NamedIndividual>
     
@@ -2261,6 +2322,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#emmy_2017">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#EmmyAward"/>
+        <has_award_name>Emmy</has_award_name>
         <has_award_year rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">2017</has_award_year>
     </owl:NamedIndividual>
     
@@ -2820,6 +2882,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#knife">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#MaterialWeapon"/>
+        <has_weapon_name>Knife</has_weapon_name>
         <has_weapon_strength rdf:datatype="http://www.w3.org/2001/XMLSchema#int">36</has_weapon_strength>
     </owl:NamedIndividual>
     
@@ -2841,6 +2904,8 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
         <has_episode rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#episode01_09"/>
         <has_episode rdf:resource="https://es.dbpedia.org/page/Game_of_Thrones#episode01_10"/>
         <season_recorded_in rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#spain"/>
+        <has_score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</has_score>
+        <has_views rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.5</has_views>
     </owl:NamedIndividual>
     
 
@@ -2850,6 +2915,7 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#sword">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#MaterialWeapon"/>
+        <has_weapon_name>Sword</has_weapon_name>
         <has_weapon_strength rdf:datatype="http://www.w3.org/2001/XMLSchema#int">43</has_weapon_strength>
     </owl:NamedIndividual>
     
@@ -2870,7 +2936,8 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#valyrio_Fire">
         <rdf:type rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#MaterialWeapon"/>
-        <has_weapon_strength rdf:datatype="http://www.w3.org/2001/XMLSchema#int">81</has_weapon_strength>
+        <has_weapon_name>Valyrio Fire</has_weapon_name>
+        <has_weapon_strength rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</has_weapon_strength>
     </owl:NamedIndividual>
     
 
@@ -2905,26 +2972,162 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#Battle"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Award"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Country"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Genre"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#HouseClan"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Kingdom"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Language"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Person"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Platform"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Series"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Weapon"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#MainCharacter"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#RecurringCharacter"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#SporadicCharacter"/>
         </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#adventure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#canada"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#chinese"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#croatia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#emmy_2019"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#episode01_01"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#episode01_02"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#french"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#gameOfThrones"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#greece"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#iceland"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#italian"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#italy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#japanese"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#malta"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#morocco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#season02"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#season03"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#season04"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#season05"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#season06"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#season07"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#season08"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#spain"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#spanish"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Aidan_Gillen"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Alan_Taylor"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Alex_Graves"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Arya_Stark"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Bryan_Cogman"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Cersei_Lannister"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Conleth_Hill"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#D.B.Weiss"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Daenerys_Targaryen"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#David_Benioff"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Drogon"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Emilia_Clarke"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#FamilyArryn"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#FamilyBaratheon"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#FamilyFrey"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#FamilyGreyjoy"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#FamilyLannister"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#FamilyNightsWatch"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#FamilyStark"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#FamilyTargaryen"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#FamilyTully"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#FamilyTyrell"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#George_R.R.Martin"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#HBO"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#James_Lannister"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Jane_Espenson"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Jeremy_Podeswa"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Jon_Snow"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Kit_Harington"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Lena_Headey"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Maisie_Williams"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Mark_Mylod"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Nikolaj_Coster-Waldau"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#North_King"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Peter_Dinklage"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Petyr_Baelish"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Rhaegal"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Richard_Brake"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Sansa_Stark"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Sophie_Turner"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#The_Iron_Islands"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#The_North"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#The_Riverlands"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#The_Stormlands_and_Dorne"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#The_reach"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#The_vale_of_Arryn"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#The_westerlands"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Tyrion_Lannister"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Vanessa_Taylor"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Varys"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#Viserion"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#action"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#arakh"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#ax"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#battleHardhome"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#battleOfBlackwater"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#battleOfTheBastards"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#battleTheLongNight"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#battlelOfCastleBlack"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#crossbow"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#dagger"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#emmy_2017"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode01_03"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode01_04"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode01_05"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode01_06"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode01_07"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode01_08"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode01_09"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode01_10"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode02_01"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode02_02"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode02_03"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode02_04"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode02_05"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode02_06"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode02_07"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode02_08"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode02_09"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode02_10"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode03_01"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode03_02"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode03_03"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode03_04"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode03_05"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode03_06"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode03_07"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode03_08"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode03_09"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode03_10"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode04_01"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode04_02"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode04_03"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode04_04"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode04_05"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode05_01"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode05_02"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode05_03"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode05_04"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode05_05"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode06_01"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode06_02"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode06_03"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode06_04"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode06_05"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode07_01"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode07_02"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode07_03"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode07_04"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode07_05"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode08_01"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode08_02"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode08_03"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode08_04"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#episode08_05"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#fantasy"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#german"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#knife"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#season01"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#sword"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#tragedy"/>
+            <rdf:Description rdf:about="https://es.dbpedia.org/page/Game_of_Thrones#valyrio_Fire"/>
+        </owl:distinctMembers>
     </rdf:Description>
     
 
@@ -2947,80 +3150,14 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
     <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#cc">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#w">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#e">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#d">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment>Classifies episodes into long ones if duration is greater than 80 minutes.</rdfs:comment>
-        <rdfs:label>longEpisodeDef</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_duration"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#e"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#d"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
-                                <swrl:arguments>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#d"/>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </swrl:arguments>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Episode"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#e"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#LongEpisode"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#e"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
     </rdf:Description>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
@@ -3182,6 +3319,216 @@ In addition, a Kingdom may contain one or several house clans.</rdfs:comment>
                         <swrl:arguments rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#s"/>
                         </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Rule to classify which weapons are lethal</rdfs:comment>
+        <rdfs:label>lethalWeaponDef</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Weapon"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_weapon_strength"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#w"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#s"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#LethalWeapon"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Query to find which weapons are classified as lethal</rdfs:comment>
+        <rdfs:label>lethalWeaponQuery</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Weapon"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_weapon_strength"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#w"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#s"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#w"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#s"/>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Classifies episodes into long ones if duration is greater than 80 minutes.</rdfs:comment>
+        <rdfs:label>longEpisodeDef</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_duration"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#e"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                <swrl:arguments>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#d"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Episode"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#e"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#LongEpisode"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#e"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
