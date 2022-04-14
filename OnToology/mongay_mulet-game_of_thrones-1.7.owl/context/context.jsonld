@@ -1,0 +1,343 @@
+{
+  "@context" : {
+    "EmmyAward" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#EmmyAward"
+    },
+    "is_character_alive" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#is_character_alive",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "has_role" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_role",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "creationDate" : {
+      "@id" : "http://purl.org/dc/terms/creationDate"
+    },
+    "ScreenWriter" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology.0#ScreenWriter"
+    },
+    "MainCharacter" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology.0#MainCharacter"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "has_genre_name" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_genre_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "houseclan_takes_part_in_battle" : {
+      "@id" : "https://es.dbpedia.org/page/Game_of_Thrones#houseclan_takes_part_in_battle",
+      "@type" : "@id"
+    },
+    "has_kingdom_name" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_kingdom_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Platform" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology.0#Platform"
+    },
+    "season_recorded_in" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#season_recorded_in",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "Country" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology.0#Country"
+    },
+    "Kingdom" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology.0#Kingdom"
+    },
+    "has_genre" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_genre",
+      "@type" : "@id"
+    },
+    "battle_takes_place" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#battle_takes_place",
+      "@type" : "@id"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "LethalWeapon" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#LethalWeapon"
+    },
+    "isRuleEnabled" : {
+      "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
+    },
+    "Director" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology.0#Director"
+    },
+    "has_duration" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_duration",
+      "@type" : "http://www.w3.org/2001/XMLSchema#unsignedInt"
+    },
+    "has_budget" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_budget",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "has_author" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_author",
+      "@type" : "@id"
+    },
+    "battle_involves" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#battle_involves",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "author" : {
+      "@id" : "http://purl.org/dc/terms/author"
+    },
+    "Character" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology.0#Character"
+    },
+    "is_author_of" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#is_author_of",
+      "@type" : "@id"
+    },
+    "broadcasts" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#broadcasts",
+      "@type" : "@id"
+    },
+    "character_in_episode" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#character_in_episode",
+      "@type" : "@id"
+    },
+    "episode_in_season" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#episode_in_season",
+      "@type" : "@id"
+    },
+    "Weapon" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology.0#Weapon"
+    },
+    "has_score" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_score"
+    },
+    "Episode" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology.0#Episode"
+    },
+    "has_weapon_strength" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_weapon_strength"
+    },
+    "has_staff" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_staff",
+      "@type" : "@id"
+    },
+    "has_person_name" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_person_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Person" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology.0#Person"
+    },
+    "Award" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology.0#Award"
+    },
+    "episode_has_battle" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#episode_has_battle",
+      "@type" : "@id"
+    },
+    "SporadicCharacter" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology.0#SporadicCharacter"
+    },
+    "Actor" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology.0#Actor"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "has_battle_description" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_battle_description",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Battle" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#Battle"
+    },
+    "has_award_year" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_award_year",
+      "@type" : "http://www.w3.org/2001/XMLSchema#unsignedInt"
+    },
+    "HouseClan" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology.0#HouseClan"
+    },
+    "award_to_series" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#award_to_series",
+      "@type" : "@id"
+    },
+    "has_weapon_name" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_weapon_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "kingdom_has_houseclan" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#kingdom_has_houseclan",
+      "@type" : "@id"
+    },
+    "Part" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology.0#Part"
+    },
+    "is_cast_by" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#is_cast_by",
+      "@type" : "@id"
+    },
+    "country_has_season" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#country_has_season",
+      "@type" : "@id"
+    },
+    "has_character_description" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_character_description",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "has_country_code" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_country_code",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "SpainRecordedSeason" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#SpainRecordedSeason"
+    },
+    "casts" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#casts",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "has_award" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_award",
+      "@type" : "@id"
+    },
+    "has_director" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_director",
+      "@type" : "@id"
+    },
+    "has_award_name" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_award_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "has_language_code" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_language_code",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "TVChannel" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology.0#TVChannel"
+    },
+    "was_born" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#was_born",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "MaterialWeapon" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#MaterialWeapon"
+    },
+    "Author" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology.0#Author"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "Series" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology.0#Series"
+    },
+    "LongEpisode" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology.0#LongEpisode"
+    },
+    "episode_has_deathof" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#episode_has_deathof",
+      "@type" : "@id"
+    },
+    "Language" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology.0#Language"
+    },
+    "EmmyAwardedSeries" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#EmmyAwardedSeries"
+    },
+    "is_director_of" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#is_director_of",
+      "@type" : "@id"
+    },
+    "has_order" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_order",
+      "@type" : "http://www.w3.org/2001/XMLSchema#unsignedInt"
+    },
+    "AnimalWeapon" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#AnimalWeapon"
+    },
+    "staff_in_series" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#staff_in_series",
+      "@type" : "@id"
+    },
+    "is_season_of" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#is_season_of",
+      "@type" : "@id"
+    },
+    "episode_has_character" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#episode_has_character",
+      "@type" : "@id"
+    },
+    "has_season" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_season",
+      "@type" : "@id"
+    },
+    "has_views" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_views",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Genre" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology.0#Genre"
+    },
+    "uses_weaponery" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#uses_weaponery",
+      "@type" : "@id"
+    },
+    "series_translated_in" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#series_translated_in",
+      "@type" : "@id"
+    },
+    "is_broadcast_in" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#is_broadcast_in",
+      "@type" : "@id"
+    },
+    "dies_in" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#dies_in",
+      "@type" : "@id"
+    },
+    "is_genre_of" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#is_genre_of",
+      "@type" : "@id"
+    },
+    "RecurringCharacter" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology.0#RecurringCharacter"
+    },
+    "has_episode" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#has_episode",
+      "@type" : "@id"
+    },
+    "Season" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology.0#Season"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "language_in_serie" : {
+      "@id" : "https://es.dbpedia.org/page/Game_of_Thrones#language_in_serie",
+      "@type" : "@id"
+    },
+    "belongs_to_kingdom" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#belongs_to_kingdom",
+      "@type" : "@id"
+    },
+    "weapon_in_battle" : {
+      "@id" : "https://w3id.org/def/gameofthronesontology#weapon_in_battle",
+      "@type" : "@id"
+    }
+  }
+}

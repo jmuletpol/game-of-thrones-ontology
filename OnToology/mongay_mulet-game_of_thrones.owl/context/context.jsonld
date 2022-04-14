@@ -24,6 +24,10 @@
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_genre_name",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
+    "houseclan_takes_part_in_battle" : {
+      "@id" : "https://es.dbpedia.org/page/Game_of_Thrones#houseclan_takes_part_in_battle",
+      "@type" : "@id"
+    },
     "has_kingdom_name" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_kingdom_name",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
@@ -51,6 +55,9 @@
     },
     "topDataProperty" : {
       "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "LethalWeapon" : {
+      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#LethalWeapon"
     },
     "isRuleEnabled" : {
       "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
@@ -174,7 +181,8 @@
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "has_country_code" : {
-      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_country_code"
+      "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#has_country_code",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "SpainRecordedSeason" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#SpainRecordedSeason"
@@ -300,6 +308,10 @@
     },
     "Season" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0.0#Season"
+    },
+    "language_in_serie" : {
+      "@id" : "https://es.dbpedia.org/page/Game_of_Thrones#language_in_serie",
+      "@type" : "@id"
     },
     "belongs_to_kingdom" : {
       "@id" : "http://www.semanticweb.org/mongay_mulet/ontologies/game_of_thrones_ontology-1.0#belongs_to_kingdom",
