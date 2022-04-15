@@ -5,5 +5,5 @@ Second deliverable of the subject "Representació del coneixement" at Universita
 Year 2021-22/2
 
 # Authors
-- Mónica Mongay 
-- Josep Mulet Pol
+- Mónica Mongay (mmongay4(at)uoc.edu)
+- Josep Mulet Pol (jmuletpol(at)uoc.edu)
