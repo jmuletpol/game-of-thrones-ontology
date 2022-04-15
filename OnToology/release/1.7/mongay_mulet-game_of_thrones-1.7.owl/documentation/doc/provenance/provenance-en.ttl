@@ -1,0 +1,14 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<https://w3id.org/def/game-of-thrones-ontology/1.7> a prov:Entity;
+	 dc:title "Game of thrones ontology";
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo :agent1;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasRevisionOf <1.6>;
+	 prov:wasGeneratedAt "2022/04/14";
+.
+:agent0 a prov:Agent; foaf:name "Josep Mulet Pol (jmuletpol@uoc.edu)".
+:agent1 a prov:Agent; foaf:name "Mónica Mongay (mmongay4@uoc.edu)".
