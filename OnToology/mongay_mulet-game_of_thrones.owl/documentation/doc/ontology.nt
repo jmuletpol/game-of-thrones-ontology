@@ -1,5 +1,5 @@
 <https://w3id.org/def/game-of-thrones-ontology/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/def/game-of-thrones-ontology/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/def/game-of-thrones-ontology/17> .
+<https://w3id.org/def/game-of-thrones-ontology/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/def/game-of-thrones-ontology/1.7> .
 <https://w3id.org/def/game-of-thrones-ontology/> <http://purl.org/dc/elements/1.1/title> "Game of thrones ontology"@en .
 <https://w3id.org/def/game-of-thrones-ontology/> <http://purl.org/dc/terms/abstract> "This work is intented to model information about TV series, in particular, we will work on an ontology based on the TV series Game of Thrones. Game of Thrones is the television series created by HBO that adapts the novel saga the Song of Ice and Fire, by George R.R. Martin. The story describes the fight for a throne, the iron throne, forged with the swords of defeated enemies. Seven are the kingdoms of the West and many are the houses that will contest the crown: the heirs, the exiles, the dispossessed and the current regents."@en .
 <https://w3id.org/def/game-of-thrones-ontology/> <http://purl.org/dc/terms/created> "2022/04/14"@en .
