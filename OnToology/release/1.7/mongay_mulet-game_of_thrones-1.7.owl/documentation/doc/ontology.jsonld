@@ -2662,7 +2662,7 @@
     "@value" : "1.6"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://w3id.org/def/game-of-thrones-ontology/1.7"
+    "@id" : "https://w3id.org/def/game-of-thrones-ontology/17"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
