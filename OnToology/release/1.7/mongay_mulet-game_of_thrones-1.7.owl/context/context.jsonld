@@ -1,24 +1,24 @@
 {
   "@context" : {
     "EmmyAward" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#EmmyAward"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#EmmyAward"
     },
     "abstract" : {
       "@id" : "http://purl.org/dc/terms/abstract"
     },
     "is_character_alive" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#is_character_alive",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#is_character_alive",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "has_role" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_role",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_role",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "ScreenWriter" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/.0#ScreenWriter"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/.0#ScreenWriter"
     },
     "MainCharacter" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/.0#MainCharacter"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/.0#MainCharacter"
     },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
@@ -27,7 +27,7 @@
       "@id" : "http://purl.org/dc/terms/created"
     },
     "has_genre_name" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_genre_name",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_genre_name",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "houseclan_takes_part_in_battle" : {
@@ -35,38 +35,38 @@
       "@type" : "@id"
     },
     "has_kingdom_name" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_kingdom_name",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_kingdom_name",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "Platform" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/.0#Platform"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Platform"
     },
     "season_recorded_in" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#season_recorded_in",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#season_recorded_in",
       "@type" : "@id"
     },
     "license" : {
       "@id" : "http://purl.org/dc/terms/license"
     },
     "Country" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/.0#Country"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Country"
     },
     "Kingdom" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/.0#Kingdom"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Kingdom"
     },
     "has_genre" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_genre",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_genre",
       "@type" : "@id"
     },
     "battle_takes_place" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#battle_takes_place",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#battle_takes_place",
       "@type" : "@id"
     },
     "topDataProperty" : {
       "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
     },
     "LethalWeapon" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#LethalWeapon"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#LethalWeapon"
     },
     "isRuleEnabled" : {
       "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
@@ -75,217 +75,217 @@
       "@id" : "http://www.w3.org/2002/07/owl#priorVersion"
     },
     "Director" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/.0#Director"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Director"
     },
     "has_duration" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_duration",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_duration",
       "@type" : "http://www.w3.org/2001/XMLSchema#unsignedInt"
     },
     "has_budget" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_budget",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_budget",
       "@type" : "http://www.w3.org/2001/XMLSchema#int"
     },
     "has_author" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_author",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_author",
       "@type" : "@id"
     },
     "battle_involves" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#battle_involves",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#battle_involves",
       "@type" : "@id"
     },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
     "Character" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/.0#Character"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Character"
     },
     "is_author_of" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#is_author_of",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#is_author_of",
       "@type" : "@id"
     },
     "broadcasts" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#broadcasts",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#broadcasts",
       "@type" : "@id"
     },
     "character_in_episode" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#character_in_episode",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#character_in_episode",
       "@type" : "@id"
     },
     "episode_in_season" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#episode_in_season",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#episode_in_season",
       "@type" : "@id"
     },
     "Weapon" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/.0#Weapon"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Weapon"
     },
     "has_score" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_score"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_score"
     },
     "Episode" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/.0#Episode"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Episode"
     },
     "has_weapon_strength" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_weapon_strength"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_weapon_strength"
     },
     "has_staff" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_staff",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_staff",
       "@type" : "@id"
     },
     "has_person_name" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_person_name",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_person_name",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "Person" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/.0#Person"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Person"
     },
     "Award" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/.0#Award"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Award"
     },
     "episode_has_battle" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#episode_has_battle",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#episode_has_battle",
       "@type" : "@id"
     },
     "SporadicCharacter" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/.0#SporadicCharacter"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/.0#SporadicCharacter"
     },
     "Actor" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/.0#Actor"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Actor"
     },
     "creator" : {
       "@id" : "http://purl.org/dc/terms/creator"
     },
     "has_battle_description" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_battle_description",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_battle_description",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "Battle" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#Battle"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#Battle"
     },
     "has_award_year" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_award_year",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_award_year",
       "@type" : "http://www.w3.org/2001/XMLSchema#unsignedInt"
     },
     "HouseClan" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/.0#HouseClan"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/.0#HouseClan"
     },
     "award_to_series" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#award_to_series",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#award_to_series",
       "@type" : "@id"
     },
     "has_weapon_name" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_weapon_name",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_weapon_name",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "kingdom_has_houseclan" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#kingdom_has_houseclan",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#kingdom_has_houseclan",
       "@type" : "@id"
     },
     "Part" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/.0#Part"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Part"
     },
     "is_cast_by" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#is_cast_by",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#is_cast_by",
       "@type" : "@id"
     },
     "country_has_season" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#country_has_season",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#country_has_season",
       "@type" : "@id"
     },
     "has_character_description" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_character_description",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_character_description",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "has_country_code" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_country_code",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_country_code",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "SpainRecordedSeason" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#SpainRecordedSeason"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#SpainRecordedSeason"
     },
     "casts" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#casts",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#casts",
       "@type" : "@id"
     },
     "title" : {
       "@id" : "http://purl.org/dc/elements/1.1/title"
     },
     "has_award" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_award",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_award",
       "@type" : "@id"
     },
     "has_director" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_director",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_director",
       "@type" : "@id"
     },
     "has_award_name" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_award_name",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_award_name",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "has_language_code" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_language_code",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_language_code",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "TVChannel" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/.0#TVChannel"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/.0#TVChannel"
     },
     "was_born" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#was_born",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#was_born",
       "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     "MaterialWeapon" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#MaterialWeapon"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#MaterialWeapon"
     },
     "Author" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/.0#Author"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Author"
     },
     "seeAlso" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
     },
     "Series" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/.0#Series"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Series"
     },
     "LongEpisode" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/.0#LongEpisode"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/.0#LongEpisode"
     },
     "episode_has_deathof" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#episode_has_deathof",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#episode_has_deathof",
       "@type" : "@id"
     },
     "Language" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/.0#Language"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Language"
     },
     "EmmyAwardedSeries" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#EmmyAwardedSeries"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#EmmyAwardedSeries"
     },
     "is_director_of" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#is_director_of",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#is_director_of",
       "@type" : "@id"
     },
     "has_order" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_order",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_order",
       "@type" : "http://www.w3.org/2001/XMLSchema#unsignedInt"
     },
     "AnimalWeapon" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#AnimalWeapon"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#AnimalWeapon"
     },
     "staff_in_series" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#staff_in_series",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#staff_in_series",
       "@type" : "@id"
     },
     "is_season_of" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#is_season_of",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#is_season_of",
       "@type" : "@id"
     },
     "episode_has_character" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#episode_has_character",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#episode_has_character",
       "@type" : "@id"
     },
     "has_season" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_season",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_season",
       "@type" : "@id"
     },
     "has_views" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_views",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_views",
       "@type" : "http://www.w3.org/2001/XMLSchema#float"
     },
     "sameAs" : {
@@ -295,37 +295,37 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
     "Genre" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/.0#Genre"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Genre"
     },
     "uses_weaponery" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#uses_weaponery",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#uses_weaponery",
       "@type" : "@id"
     },
     "series_translated_in" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#series_translated_in",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#series_translated_in",
       "@type" : "@id"
     },
     "is_broadcast_in" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#is_broadcast_in",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#is_broadcast_in",
       "@type" : "@id"
     },
     "dies_in" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#dies_in",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#dies_in",
       "@type" : "@id"
     },
     "is_genre_of" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#is_genre_of",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#is_genre_of",
       "@type" : "@id"
     },
     "RecurringCharacter" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/.0#RecurringCharacter"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/.0#RecurringCharacter"
     },
     "has_episode" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#has_episode",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#has_episode",
       "@type" : "@id"
     },
     "Season" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/.0#Season"
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Season"
     },
     "description" : {
       "@id" : "http://purl.org/dc/elements/1.1/description"
@@ -335,11 +335,11 @@
       "@type" : "@id"
     },
     "belongs_to_kingdom" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#belongs_to_kingdom",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#belongs_to_kingdom",
       "@type" : "@id"
     },
     "weapon_in_battle" : {
-      "@id" : "https://w3id.org/def/game-of-thrones-ontology/#weapon_in_battle",
+      "@id" : "https://w3id.org/def/game-of-thrones-ontology17/#weapon_in_battle",
       "@type" : "@id"
     }
   }

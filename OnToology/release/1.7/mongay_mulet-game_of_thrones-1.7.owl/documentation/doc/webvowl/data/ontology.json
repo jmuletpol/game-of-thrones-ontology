@@ -1,0 +1,3560 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://w3id.org/def/game-of-thrones-ontology17/.0", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "https://w3id.org/def/game-of-thrones-ontology17/", "http://www.w3.org/2001/XMLSchema", "https://es.dbpedia.org/page/Game_of_Thrones" ],
+    "title" : {
+      "en" : "Game of thrones ontology"
+    },
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "version" : "1.7",
+    "author" : [ "Josep Mulet Pol (jmuletpol@uoc.edu)", "Mónica Mongay (mmongay4@uoc.edu)" ],
+    "comments" : {
+      "en" : "This work is part of the assignment PAC2 of the subject \"Representació del coneixement\" of the UOC (Universitat Oberta de Catalunya). Spring edition 2021-22/2."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "en",
+        "value" : "http://creativecommons.org/licenses/by/2.0/",
+        "type" : "label"
+      } ],
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "en",
+        "value" : "1.6",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Josep Mulet Pol (jmuletpol@uoc.edu)",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Mónica Mongay (mmongay4@uoc.edu)",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "en",
+        "value" : "2022/04/14",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "This work is intented to model information about TV series, in particular, we will work on an ontology based on the TV series Game of Thrones. Game of Thrones is the television series created by HBO that adapts the novel saga the Song of Ice and Fire, by George R.R. Martin. The story describes the fight for a throne, the iron throne, forged with the swords of defeated enemies. Seven are the kingdoms of the West and many are the houses that will contest the crown: the heirs, the exiles, the dispossessed and the current regents.",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "1.7",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Game of thrones ontology",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://es.wikipedia.org/wiki/Game_of_Thrones",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "1",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "3",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "27",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "73",
+    "type" : "owl:Class"
+  }, {
+    "id" : "74",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "86",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "83",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "99",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "180",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "204",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "196",
+    "type" : "owl:intersectionOf"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "0",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "1",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "3",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#EmmyAwardedSeries",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EmmyAwardedSeries",
+      "undefined" : "EmmyAwardedSeries"
+    },
+    "intersection" : [ "8" ],
+    "comment" : {
+      "en" : "Series that have been awarded at least one Emmy"
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "27"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#unsignedInt",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "unsignedInt"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "31",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#unsignedInt",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "unsignedInt"
+    }
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Kingdom",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Kingdom",
+      "undefined" : "Kingdom"
+    },
+    "individuals" : [ {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#The_vale_of_Arryn",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "The_vale_of_Arryn"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#The_reach",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "The_reach"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#The_North",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "The_North"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#The_Iron_Islands",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "The_Iron_Islands"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#The_Stormlands_and_Dorne",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "The_Stormlands_and_Dorne"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#The_Riverlands",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "The_Riverlands"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#The_westerlands",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "The_westerlands"
+      }
+    } ],
+    "comment" : {
+      "en" : "In the series Game of Thrones, the basic geospatial organization is a Kingdom. Several kingdoms are in continuous war in order to achieve power.\nIn addition, a Kingdom may contain one or several house clans."
+    },
+    "id" : "35"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "36",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Genre",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Genre",
+      "undefined" : "Genre"
+    },
+    "individuals" : [ {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#action",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "action"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#tragedy",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "tragedy"
+      }
+    }, {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#adventure",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "adventure"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#fantasy",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "fantasy"
+      }
+    } ],
+    "comment" : {
+      "en" : "Every series has some type of content refered as genre."
+    },
+    "id" : "38"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "26",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#SpainRecordedSeason",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SpainRecordedSeason",
+      "undefined" : "SpainRecordedSeason"
+    },
+    "comment" : {
+      "en" : "A season which has been recorded in Spain."
+    },
+    "id" : "5",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/.0#MainCharacter",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MainCharacter",
+      "undefined" : "MainCharacter"
+    },
+    "intersection" : [ "22" ],
+    "comment" : {
+      "en" : "The main actor is the person who appears is most of the episodes."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "45",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "48",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Director",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Director",
+      "undefined" : "Director"
+    },
+    "individuals" : [ {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Jeremy_Podeswa",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Jeremy_Podeswa"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Mark_Mylod",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Mark_Mylod"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Alex_Graves",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Alex_Graves"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Alan_Taylor",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Alan_Taylor"
+      }
+    } ],
+    "comment" : {
+      "en" : "The director of a series is the person responsible for the sucessful development of the work. It can be regarded as the project manager of the project."
+    },
+    "id" : "49",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Season",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Season",
+      "undefined" : "Season"
+    },
+    "individuals" : [ {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#season01",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "season01"
+      }
+    }, {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#season05",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "season05"
+      }
+    }, {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#season04",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "season04"
+      }
+    }, {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#season03",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "season03"
+      }
+    }, {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#season02",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "season02"
+      }
+    }, {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#season08",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "season08"
+      }
+    }, {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#season07",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "season07"
+      }
+    }, {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#season06",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "season06"
+      }
+    } ],
+    "subClasses" : [ "5" ],
+    "comment" : {
+      "en" : "Season consists of a set of episodes of a series. Episodes, like seasons, are presented in a given order."
+    },
+    "id" : "6",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#MaterialWeapon",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaterialWeapon",
+      "undefined" : "MaterialWeapon"
+    },
+    "individuals" : [ {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#valyrio_Fire",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "valyrio_Fire"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#dagger",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "dagger"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#knife",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "knife"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#ax",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "ax"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#sword",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "sword"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#arakh",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "arakh"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#crossbow",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "crossbow"
+      }
+    } ],
+    "comment" : {
+      "en" : "A weapon made from material, e.g. arrows."
+    },
+    "id" : "53",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#AnimalWeapon",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AnimalWeapon",
+      "undefined" : "AnimalWeapon"
+    },
+    "individuals" : [ {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Rhaegal",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Rhaegal"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Drogon",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Drogon"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Viserion",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Viserion"
+      }
+    } ],
+    "comment" : {
+      "en" : "A weapon based on an animal attack, such as dragons."
+    },
+    "id" : "57",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Part",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Part",
+      "undefined" : "Part"
+    },
+    "subClasses" : [ "11", "6" ],
+    "comment" : {
+      "en" : "A Part is an abstract class that denotes a Season or Episode of a series."
+    },
+    "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/.0#LongEpisode",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LongEpisode",
+      "undefined" : "LongEpisode"
+    },
+    "comment" : {
+      "en" : "A long episode is an episode longer than 80 minutes."
+    },
+    "id" : "61",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Platform",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Platform",
+      "undefined" : "Platform"
+    },
+    "subClasses" : [ "15" ],
+    "comment" : {
+      "en" : "A platform is a means by which a series is broadcast to the audience. Further subclasses specialize this concept."
+    },
+    "id" : "16"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/.0#TVChannel",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TVChannel",
+      "undefined" : "TVChannel"
+    },
+    "individuals" : [ {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#HBO",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "HBO"
+      }
+    } ],
+    "comment" : {
+      "en" : "The TVChannel entity in which the series is broadcast."
+    },
+    "id" : "15",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Actor",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Actor",
+      "undefined" : "Actor"
+    },
+    "individuals" : [ {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Kit_Harington",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Kit_Harington"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Emilia_Clarke",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Emilia_Clarke"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Conleth_Hill",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Conleth_Hill"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Peter_Dinklage",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Peter_Dinklage"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Aidan_Gillen",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Aidan_Gillen"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Lena_Headey",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Lena_Headey"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Maisie_Williams",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Maisie_Williams"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Richard_Brake",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Richard_Brake"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Nikolaj_Coster-Waldau",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Nikolaj_Coster-Waldau"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Sophie_Turner",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Sophie_Turner"
+      }
+    } ],
+    "comment" : {
+      "en" : "An actor is the real physical person that casts a role or character in a series' episode."
+    },
+    "id" : "73",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#EmmyAward",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "https://en.wikipedia.org/wiki/Primetime_Emmy_Award_for_Outstanding_Drama_Series",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EmmyAward",
+      "undefined" : "EmmyAward"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#emmy_2019",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "emmy_2019"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#emmy_2017",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "emmy_2017"
+      }
+    } ],
+    "comment" : {
+      "en" : "The Emmy is a special type of award."
+    },
+    "id" : "74",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Person",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person",
+      "undefined" : "Person"
+    },
+    "subClasses" : [ "75", "49", "76", "73" ],
+    "comment" : {
+      "en" : "Person is an abstract class which represents a physical object."
+    },
+    "id" : "50"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Series",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Series",
+      "undefined" : "Series"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#gameOfThrones",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "gameOfThrones",
+        "undefined" : "gameOfThrones"
+      }
+    } ],
+    "comment" : {
+      "en" : "A series is a piece of artistic work that involves a set of people, has a set of genre and is broadcast to the audience in several languages and media supports. This is the main class of the ontology developed in this work."
+    },
+    "id" : "8"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Country",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Country",
+      "undefined" : "Country"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#italy",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "italy"
+      }
+    }, {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#greece",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "greece"
+      }
+    }, {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#iceland",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "iceland"
+      }
+    }, {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#canada",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "canada"
+      }
+    }, {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#morocco",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "morocco"
+      }
+    }, {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#spain",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "spain",
+        "undefined" : "spain"
+      }
+    }, {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#croatia",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "croatia"
+      }
+    }, {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#malta",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "malta"
+      }
+    } ],
+    "comment" : {
+      "en" : "The entity Country is used to link the geographical region in which every season is recorded.\nThis class shall be defined as an extensive enumeration of instances."
+    },
+    "id" : "18"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/.0#SporadicCharacter",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SporadicCharacter",
+      "undefined" : "SporadicCharacter"
+    },
+    "intersection" : [ "22" ],
+    "comment" : {
+      "en" : "An sporadic actor is a person that solely appears in one or a few episodes, sometimes as a guest actor."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "86"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/.0#HouseClan",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HouseClan",
+      "undefined" : "HouseClan"
+    },
+    "individuals" : [ {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#FamilyLannister",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "FamilyLannister"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#FamilyBaratheon",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "FamilyBaratheon"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#FamilyTargaryen",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "FamilyTargaryen"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#FamilyGreyjoy",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "FamilyGreyjoy"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#FamilyFrey",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "FamilyFrey"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#FamilyArryn",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "FamilyArryn"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#FamilyTyrell",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "FamilyTyrell"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#FamilyNightsWatch",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "FamilyNightsWatch"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#FamilyStark",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "FamilyStark"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#FamilyTully",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "FamilyTully"
+      }
+    } ],
+    "comment" : {
+      "en" : "In the series Game of Thrones, every Kingdom has several family houses or clans. This entity is devoted to model these clans."
+    },
+    "id" : "72"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Award",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Award",
+      "undefined" : "Award"
+    },
+    "subClasses" : [ "74" ],
+    "comment" : {
+      "en" : "An award is a prize given to a series."
+    },
+    "id" : "40"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Character",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Character",
+      "undefined" : "Character"
+    },
+    "individuals" : [ {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Varys",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Varys"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Jon_Snow",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Jon_Snow"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Daenerys_Targaryen",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Daenerys_Targaryen"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Petyr_Baelish",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Petyr_Baelish"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#North_King",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "North_King"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#James_Lannister",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "James_Lannister"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Cersei_Lannister",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Cersei_Lannister"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Sansa_Stark",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Sansa_Stark"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Arya_Stark",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Arya_Stark"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Tyrion_Lannister",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Tyrion_Lannister"
+      }
+    } ],
+    "comment" : {
+      "en" : "A character is a role in the series which is cast by an actor."
+    },
+    "id" : "22"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Author",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Author",
+      "undefined" : "Author"
+    },
+    "individuals" : [ {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#George_R.R.Martin",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "George_R.R.Martin"
+      }
+    } ],
+    "comment" : {
+      "en" : "The author of a series is the person who invented and wrote the series."
+    },
+    "id" : "75",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Weapon",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Weapon",
+      "undefined" : "Weapon"
+    },
+    "subClasses" : [ "57", "83", "53" ],
+    "comment" : {
+      "en" : "In the numerous battles in the series Game of Thrones, diferent types of weapons are used. In particular, there are weapons based on animals, such as dragons, and material-like ones like arrows."
+    },
+    "id" : "25"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#LethalWeapon",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LethalWeapon",
+      "undefined" : "LethalWeapon"
+    },
+    "comment" : {
+      "en" : "A weapon is classified as lethal if has a stregth greater than 99%."
+    },
+    "id" : "83",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#Battle",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Battle",
+      "undefined" : "Battle"
+    },
+    "individuals" : [ {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#battleTheLongNight",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "battleTheLongNight"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#battleHardhome",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "battleHardhome"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#battlelOfCastleBlack",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "battlelOfCastleBlack"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#battleOfTheBastards",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "battleOfTheBastards"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#battleOfBlackwater",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "battleOfBlackwater"
+      }
+    } ],
+    "comment" : {
+      "en" : "In an episode, it appears some battle which involves different clans on either side."
+    },
+    "id" : "20"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Language",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Language",
+      "undefined" : "Language"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#italian",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "italian"
+      }
+    }, {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#french",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "french"
+      }
+    }, {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#chinese",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "chinese"
+      }
+    }, {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#spanish",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "spanish"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#german",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "german"
+      }
+    }, {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#japanese",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "japanese"
+      }
+    } ],
+    "comment" : {
+      "en" : "A series is translated into one or more languages. The entity language is defined as a set of instances."
+    },
+    "id" : "9"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/.0#ScreenWriter",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ScreenWriter",
+      "undefined" : "ScreenWriter"
+    },
+    "individuals" : [ {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Vanessa_Taylor",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Vanessa_Taylor"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Jane_Espenson",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Jane_Espenson"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#D.B.Weiss",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "D.B.Weiss"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#David_Benioff",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "David_Benioff"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#Bryan_Cogman",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "Bryan_Cogman"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#George_R.R.Martin",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "George_R.R.Martin"
+      }
+    } ],
+    "comment" : {
+      "en" : "The screen writer is the person which usually adapts the story written by the author into the format of episodes. In addition, he writes the script that the actors must cast."
+    },
+    "id" : "76",
+    "superClasses" : [ "50" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "75", "49", "76" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "99"
+  }, {
+    "instances" : 0,
+    "union" : [ "75", "49", "76" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "180"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#unsignedInt",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "55",
+    "label" : {
+      "IRI-based" : "unsignedInt"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/.0#Episode",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Episode",
+      "undefined" : "Episode"
+    },
+    "individuals" : [ {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode03_03",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode03_03"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode03_04",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode03_04"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode03_01",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode03_01"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode03_02",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode03_02"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode07_05",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode07_05"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode07_04",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode07_04"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode07_03",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode07_03"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode07_02",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode07_02"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode07_01",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode07_01"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode03_09",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode03_09"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode03_07",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode03_07"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode03_08",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode03_08"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode03_05",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode03_05"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode03_06",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode03_06"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode02_01",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode02_01"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode02_03",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode02_03"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode06_05",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode06_05"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode02_02",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode02_02"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode06_04",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode06_04"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode06_03",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode06_03"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode03_10",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode03_10"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode06_02",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode06_02"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode06_01",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode06_01"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode02_09",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode02_09"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode02_08",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode02_08"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode02_05",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode02_05"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode02_04",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode02_04"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode02_07",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode02_07"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode02_06",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode02_06"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode05_05",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode05_05"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode05_03",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode05_03"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode05_04",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode05_04"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode05_01",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode05_01"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode05_02",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode05_02"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode02_10",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode02_10"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode01_08",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode01_08"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode01_07",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode01_07"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode01_09",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode01_09"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode01_04",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode01_04"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode01_03",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode01_03"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode01_06",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode01_06"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode01_05",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode01_05"
+      }
+    }, {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#episode01_01",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "episode01_01"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode08_01",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode08_01"
+      }
+    }, {
+      "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#episode01_02",
+      "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+      "labels" : {
+        "IRI-based" : "episode01_02"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode04_04",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode04_04"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode04_05",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode04_05"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode01_10",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode01_10"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode04_02",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode04_02"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode04_03",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode04_03"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode04_01",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode04_01"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode08_02",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode08_02"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode08_03",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode08_03"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode08_04",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode08_04"
+      }
+    }, {
+      "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#episode08_05",
+      "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+      "labels" : {
+        "IRI-based" : "episode08_05"
+      }
+    } ],
+    "subClasses" : [ "61" ],
+    "comment" : {
+      "en" : "Episode is a development of some story in a fixed amount of time. Episodes, like seasons, are presented in a given order."
+    },
+    "id" : "11",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "204",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/.0#RecurringCharacter",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/.0",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RecurringCharacter",
+      "undefined" : "RecurringCharacter"
+    },
+    "intersection" : [ "22" ],
+    "comment" : {
+      "en" : "A recurring actor is a person that apears is some of the episodes."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "196"
+  } ],
+  "property" : [ {
+    "id" : "4",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "7",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "51",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "69",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "66",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "71",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "77",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "87",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "91",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "93",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "95",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "101",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "102",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "103",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "104",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "105",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "106",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "107",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "108",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "109",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "110",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "111",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "112",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "114",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "115",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "116",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "117",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "118",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "119",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "120",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "121",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "122",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "123",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "124",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "125",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "126",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "127",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "128",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "129",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "130",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "131",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "132",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "133",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "134",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "135",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "136",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "137",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "138",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "139",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "140",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "141",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "142",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "143",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "144",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "145",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "146",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "147",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "148",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "149",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "150",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "151",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "152",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "153",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "154",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "155",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "156",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "157",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "158",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "159",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "160",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "161",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "162",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "163",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "164",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "165",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "166",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "167",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "168",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "169",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "170",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "171",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "172",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "173",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "174",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "175",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "176",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "177",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "178",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "179",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "181",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "182",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "183",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "184",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "185",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "186",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "187",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "188",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "189",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "190",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "191",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "192",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "193",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "194",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "94",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "195",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "197",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "198",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "199",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "200",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "201",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "202",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "203",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "205",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "206",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "113",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "207",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "208",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "209",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "210",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "211",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "212",
+    "type" : "owl:disjointWith"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "6",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "4"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#series_translated_in",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "series_translated_in",
+      "undefined" : "series_translated_in"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "A series may be translated in 1 or more languages."
+    },
+    "attributes" : [ "object" ],
+    "id" : "7"
+  }, {
+    "range" : "12",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "10"
+  }, {
+    "range" : "12",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "13"
+  }, {
+    "range" : "16",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#season_recorded_in",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "season_recorded_in",
+      "undefined" : "season_recorded_in"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "In Game of Thrones, the seasons are recorded in different regions or countries."
+    },
+    "attributes" : [ "object" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#episode_has_battle",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "episode_has_battle",
+      "undefined" : "episode_has_battle"
+    },
+    "domain" : "11",
+    "comment" : {
+      "undefined" : "The inverse of battle_takes_place"
+    },
+    "attributes" : [ "object" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#dies_in",
+    "inverse" : "23",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "dies_in",
+      "undefined" : "dies_in"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "In which episode dies a character"
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_weapon_name",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "has_weapon_name",
+      "undefined" : "has_weapon_name"
+    },
+    "domain" : "25",
+    "comment" : {
+      "en" : "The name or description of the weapon."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "24"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_award_name",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "has_award_name",
+      "undefined" : "has_award_name"
+    },
+    "domain" : "40",
+    "comment" : {
+      "en" : "The name or description of an award."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "39"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_views",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "has_views",
+      "undefined" : "has_views"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "The number of views of an episode in millions."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "43"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#was_born",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "was_born",
+      "undefined" : "was_born"
+    },
+    "domain" : "50",
+    "comment" : {
+      "en" : "The date in which a physical person is born or a character is created."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "51"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_character_description",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "has_character_description",
+      "undefined" : "has_character_description"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "Further description of the character besides its fullname given by the property hasPersonName."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "52"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_award_year",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "has_award_year",
+      "undefined" : "has_award_year"
+    },
+    "domain" : "40",
+    "comment" : {
+      "en" : "The year of the edition of an award"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "topDataProperty"
+    },
+    "domain" : "0",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "56"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_person_name",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "has_person_name",
+      "undefined" : "has_person_name"
+    },
+    "domain" : "50",
+    "comment" : {
+      "en" : "The fullname of a person or character."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "58"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#episode_in_season",
+    "inverse" : "60",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "episode_in_season",
+      "undefined" : "episode_in_season"
+    },
+    "domain" : "11",
+    "comment" : {
+      "undefined" : "The inverse property of has_episode"
+    },
+    "attributes" : [ "object" ],
+    "id" : "59"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#uses_weaponery",
+    "inverse" : "63",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "uses_weaponery",
+      "undefined" : "uses_weaponery"
+    },
+    "domain" : "20",
+    "comment" : {
+      "en" : "A battle uses specific weaponery."
+    },
+    "attributes" : [ "object" ],
+    "id" : "62"
+  }, {
+    "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#language_in_serie",
+    "inverse" : "7",
+    "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "language_in_serie",
+      "undefined" : "language_in_serie"
+    },
+    "domain" : "9",
+    "comment" : {
+      "undefined" : "The inverse property of series_translated_in"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "64"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#character_in_episode",
+    "inverse" : "66",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "character_in_episode",
+      "undefined" : "character_in_episode"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "In which episosed apperas each character."
+    },
+    "attributes" : [ "object" ],
+    "id" : "65"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#award_to_series",
+    "inverse" : "68",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "award_to_series",
+      "undefined" : "award_to_series"
+    },
+    "domain" : "40",
+    "comment" : {
+      "undefined" : "The inverse property of has_award"
+    },
+    "attributes" : [ "object" ],
+    "id" : "67"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#is_genre_of",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "is_genre_of",
+      "undefined" : "is_genre_of"
+    },
+    "domain" : "38",
+    "comment" : {
+      "undefined" : "The inverse property of has_genre"
+    },
+    "attributes" : [ "object" ],
+    "id" : "69"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#country_has_season",
+    "inverse" : "17",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "country_has_season",
+      "undefined" : "country_has_season"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "The inverse of season_recorded_in"
+    },
+    "attributes" : [ "object" ],
+    "id" : "70"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#episode_has_character",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "episode_has_character",
+      "undefined" : "episode_has_character"
+    },
+    "domain" : "11",
+    "comment" : {
+      "undefined" : "The inverse of episode character_in_episode"
+    },
+    "attributes" : [ "object" ],
+    "id" : "66"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#kingdom_has_houseclan",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "kingdom_has_houseclan",
+      "undefined" : "kingdom_has_houseclan"
+    },
+    "domain" : "35",
+    "comment" : {
+      "undefined" : "The inverse property of belongs_to_kingdom"
+    },
+    "attributes" : [ "object" ],
+    "id" : "71"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_battle_description",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "has_battle_description",
+      "undefined" : "has_battle_description"
+    },
+    "domain" : "20",
+    "comment" : {
+      "en" : "The name or description of a battle."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "77"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#weapon_in_battle",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "weapon_in_battle",
+      "undefined" : "weapon_in_battle"
+    },
+    "domain" : "25",
+    "comment" : {
+      "undefined" : "The inverse property of uses_weaponery"
+    },
+    "attributes" : [ "object" ],
+    "id" : "63"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#is_author_of",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "is_author_of",
+      "undefined" : "is_author_of"
+    },
+    "domain" : "75",
+    "comment" : {
+      "undefined" : "The inverse property of has_author"
+    },
+    "attributes" : [ "object" ],
+    "id" : "78"
+  }, {
+    "range" : "50",
+    "domain" : "73",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "79"
+  }, {
+    "range" : "40",
+    "domain" : "74",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "80"
+  }, {
+    "range" : "25",
+    "domain" : "57",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "81"
+  }, {
+    "range" : "25",
+    "domain" : "83",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "82"
+  }, {
+    "range" : "25",
+    "domain" : "53",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "84"
+  }, {
+    "range" : "11",
+    "domain" : "61",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "85"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#is_season_of",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "is_season_of",
+      "undefined" : "is_season_of"
+    },
+    "domain" : "6",
+    "comment" : {
+      "undefined" : "The inverse property of has_season"
+    },
+    "attributes" : [ "object" ],
+    "id" : "87"
+  }, {
+    "range" : "50",
+    "domain" : "75",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "88"
+  }, {
+    "range" : "50",
+    "domain" : "49",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "89"
+  }, {
+    "range" : "50",
+    "domain" : "76",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "90"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#is_character_alive",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "is_character_alive",
+      "undefined" : "is_character_alive"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "The date in which the physical person dies or the character dissapears from the series."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "91"
+  }, {
+    "range" : "12",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "92"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#broadcasts",
+    "inverse" : "94",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "broadcasts",
+      "undefined" : "broadcasts"
+    },
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "The inverse property of is_broadcast_in"
+    },
+    "attributes" : [ "object" ],
+    "id" : "93"
+  }, {
+    "iri" : "https://es.dbpedia.org/page/Game_of_Thrones#houseclan_takes_part_in_battle",
+    "inverse" : "96",
+    "baseIri" : "https://es.dbpedia.org/page/Game_of_Thrones",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "houseclan_takes_part_in_battle",
+      "undefined" : "houseclan_takes_part_in_batte"
+    },
+    "domain" : "72",
+    "comment" : {
+      "undefined" : "The inverse property of battle_involves"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "95"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_duration",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "has_duration",
+      "undefined" : "has_duration"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "The duration of an episode in minutes."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "97"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#staff_in_series",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "staff_in_series",
+      "undefined" : "staff_in_series"
+    },
+    "domain" : "99",
+    "comment" : {
+      "undefined" : "The inverse property of has_staff"
+    },
+    "attributes" : [ "object" ],
+    "id" : "98"
+  }, {
+    "range" : "9",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "100"
+  }, {
+    "range" : "35",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "101"
+  }, {
+    "range" : "18",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "102"
+  }, {
+    "range" : "25",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "103"
+  }, {
+    "range" : "72",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "104"
+  }, {
+    "range" : "38",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "105"
+  }, {
+    "range" : "50",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "106"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#battle_takes_place",
+    "inverse" : "19",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "battle_takes_place",
+      "undefined" : "battle_takes_place"
+    },
+    "domain" : "20",
+    "comment" : {
+      "en" : "A Battle takes place in a episode."
+    },
+    "attributes" : [ "object" ],
+    "id" : "107"
+  }, {
+    "range" : "12",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "108"
+  }, {
+    "range" : "8",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "109"
+  }, {
+    "range" : "16",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "110"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#belongs_to_kingdom",
+    "inverse" : "71",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "belongs_to_kingdom",
+      "undefined" : "belongs_to_kingdom"
+    },
+    "domain" : "72",
+    "comment" : {
+      "en" : "A house clan belongs to a kingdom"
+    },
+    "attributes" : [ "object" ],
+    "id" : "111"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_author",
+    "inverse" : "78",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "75",
+    "label" : {
+      "IRI-based" : "has_author",
+      "undefined" : "has_author"
+    },
+    "superproperty" : [ "113" ],
+    "domain" : "8",
+    "comment" : {
+      "en" : "The author of the series."
+    },
+    "attributes" : [ "object" ],
+    "id" : "112"
+  }, {
+    "range" : "35",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "114"
+  }, {
+    "range" : "72",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "115"
+  }, {
+    "range" : "9",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "116"
+  }, {
+    "range" : "22",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "117"
+  }, {
+    "range" : "25",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "118"
+  }, {
+    "range" : "38",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "119"
+  }, {
+    "range" : "18",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "120"
+  }, {
+    "range" : "50",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "121"
+  }, {
+    "range" : "8",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "122"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#episode_has_deathof",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "episode_has_deathof",
+      "undefined" : "episode_has_deathof"
+    },
+    "domain" : "11",
+    "comment" : {
+      "undefined" : "The inverse property of dies_in"
+    },
+    "attributes" : [ "object" ],
+    "id" : "23"
+  }, {
+    "range" : "16",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "123"
+  }, {
+    "range" : "8",
+    "domain" : "38",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "124"
+  }, {
+    "range" : "35",
+    "domain" : "72",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "125"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_budget",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "has_budget",
+      "undefined" : "has_budget"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "The budget associated to each season. The amount is given in millions of US dollars."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "126"
+  }, {
+    "range" : "25",
+    "domain" : "38",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "127"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_season",
+    "inverse" : "87",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "has_season",
+      "undefined" : "has_season"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "A series is comprised of several parts called seasons."
+    },
+    "attributes" : [ "object" ],
+    "id" : "128"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#battle_involves",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "battle_involves",
+      "undefined" : "battle_involves"
+    },
+    "domain" : "20",
+    "comment" : {
+      "en" : "A battle must involve at least 2 or more house clans."
+    },
+    "attributes" : [ "object" ],
+    "id" : "96"
+  }, {
+    "range" : "12",
+    "domain" : "38",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "129"
+  }, {
+    "range" : "9",
+    "domain" : "38",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "130"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#is_cast_by",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "is_cast_by",
+      "undefined" : "is_cast_by"
+    },
+    "domain" : "22",
+    "attributes" : [ "object" ],
+    "id" : "131"
+  }, {
+    "range" : "16",
+    "domain" : "38",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "132"
+  }, {
+    "range" : "50",
+    "domain" : "38",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "133"
+  }, {
+    "range" : "25",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "134"
+  }, {
+    "range" : "8",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "135"
+  }, {
+    "range" : "35",
+    "domain" : "38",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "136"
+  }, {
+    "range" : "72",
+    "domain" : "38",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "137"
+  }, {
+    "range" : "16",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "138"
+  }, {
+    "range" : "50",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "139"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#casts",
+    "inverse" : "131",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "casts",
+      "undefined" : "casts"
+    },
+    "domain" : "50",
+    "comment" : {
+      "en" : "An actor casts or plays a character. The character appears in the episode of the series."
+    },
+    "attributes" : [ "object" ],
+    "id" : "140"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#is_director_of",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "is_director_of",
+      "undefined" : "is_director_of"
+    },
+    "domain" : "49",
+    "comment" : {
+      "undefined" : "The inverse property of Author or has_director"
+    },
+    "attributes" : [ "object" ],
+    "id" : "141"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_award",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "has_award",
+      "undefined" : "has_award"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "A series may have recieved 0 or more prizes or awards."
+    },
+    "attributes" : [ "object" ],
+    "id" : "68"
+  }, {
+    "range" : "12",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "142"
+  }, {
+    "range" : "72",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "143"
+  }, {
+    "range" : "38",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "144"
+  }, {
+    "range" : "9",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "145"
+  }, {
+    "range" : "35",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "146"
+  }, {
+    "range" : "16",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "147"
+  }, {
+    "range" : "50",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "148"
+  }, {
+    "range" : "25",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "149"
+  }, {
+    "range" : "8",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "150"
+  }, {
+    "range" : "8",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "151"
+  }, {
+    "range" : "16",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "152"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_role",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "has_role",
+      "undefined" : "has_role"
+    },
+    "domain" : "22",
+    "comment" : {
+      "undefined" : "The role of a character"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "153"
+  }, {
+    "range" : "16",
+    "domain" : "50",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "154"
+  }, {
+    "range" : "25",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "155"
+  }, {
+    "range" : "50",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "156"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_genre_name",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "has_genre_name",
+      "undefined" : "has_genre_name"
+    },
+    "domain" : "38",
+    "comment" : {
+      "en" : "The name or description of a genre."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "157"
+  }, {
+    "range" : "25",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "158"
+  }, {
+    "range" : "8",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "159"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_kingdom_name",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "has_kingdom_name",
+      "undefined" : "has_kingdom_name"
+    },
+    "domain" : "35",
+    "comment" : {
+      "en" : "The name or description of a kingdom."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "160"
+  }, {
+    "range" : "12",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "161"
+  }, {
+    "range" : "25",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "162"
+  }, {
+    "range" : "16",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "163"
+  }, {
+    "range" : "50",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "164"
+  }, {
+    "range" : "50",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "165"
+  }, {
+    "range" : "12",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "166"
+  }, {
+    "range" : "8",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "167"
+  }, {
+    "range" : "16",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "168"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_director",
+    "inverse" : "141",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "has_director",
+      "undefined" : "has_director"
+    },
+    "superproperty" : [ "113" ],
+    "domain" : "8",
+    "comment" : {
+      "en" : "The director of the series."
+    },
+    "attributes" : [ "object" ],
+    "id" : "169"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_score",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "has_score",
+      "undefined" : "has_score"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "Every series has a relative score given between 0 and 10.\nWe apply a restriction on this property in order to fullfill this range restriction."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "170"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_country_code",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "has_country_code",
+      "undefined" : "has_country_code"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "The 2 letter code of a country"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "171"
+  }, {
+    "range" : "25",
+    "domain" : "72",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "172"
+  }, {
+    "range" : "8",
+    "domain" : "72",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "173"
+  }, {
+    "range" : "9",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "174"
+  }, {
+    "range" : "12",
+    "domain" : "72",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "175"
+  }, {
+    "range" : "9",
+    "domain" : "72",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "176"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_order",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "has_order",
+      "undefined" : "has_order"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "The ordinal position of the part in a sequence."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "177"
+  }, {
+    "range" : "16",
+    "domain" : "72",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "178"
+  }, {
+    "range" : "50",
+    "domain" : "72",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "179"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#series_translated_in",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "series_translated_in",
+      "undefined" : "series_translated_in"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "A series may be translated in 1 or more languages."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "181"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#is_broadcast_in",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "is_broadcast_in",
+      "undefined" : "is_broadcast_in"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "A series may be broadcast in 0 or more media or platform."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "182"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_genre",
+    "inverse" : "69",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "has_genre",
+      "undefined" : "has_genre"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "A series must have one or more genre that define the type of content."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "183"
+  }, {
+    "range" : "40",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "184"
+  }, {
+    "range" : "22",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "185"
+  }, {
+    "range" : "18",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "186"
+  }, {
+    "range" : "38",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "187"
+  }, {
+    "range" : "72",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "188"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_episode",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "has_episode",
+      "undefined" : "has_episode"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "A season is comprised of one or more episodes."
+    },
+    "attributes" : [ "object" ],
+    "id" : "60"
+  }, {
+    "range" : "35",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "189"
+  }, {
+    "range" : "9",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "190"
+  }, {
+    "range" : "12",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "191"
+  }, {
+    "range" : "53",
+    "domain" : "57",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "192"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#uses_weaponery",
+    "inverse" : "63",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "uses_weaponery",
+      "undefined" : "uses_weaponery"
+    },
+    "domain" : "20",
+    "comment" : {
+      "en" : "A battle uses specific weaponery."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "193"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#season_recorded_in",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "season_recorded_in",
+      "undefined" : "season_recorded_in"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "In Game of Thrones, the seasons are recorded in different regions or countries."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "194"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#is_broadcast_in",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "is_broadcast_in",
+      "undefined" : "is_broadcast_in"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "A series may be broadcast in 0 or more media or platform."
+    },
+    "attributes" : [ "object" ],
+    "id" : "94"
+  }, {
+    "range" : "86",
+    "domain" : "196",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "195"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_staff",
+    "inverse" : "98",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "has_staff",
+      "undefined" : "has_staff"
+    },
+    "domain" : "8",
+    "subproperty" : [ "112", "169" ],
+    "comment" : {
+      "en" : "The staff that works as in a series which are not actors."
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "197"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_season",
+    "inverse" : "87",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "has_season",
+      "undefined" : "has_season"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "A series is comprised of several parts called seasons."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "198"
+  }, {
+    "range" : "6",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "199"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#is_cast_by",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "73",
+    "label" : {
+      "IRI-based" : "is_cast_by",
+      "undefined" : "is_cast_by"
+    },
+    "domain" : "22",
+    "attributes" : [ "object", "allValues" ],
+    "id" : "200"
+  }, {
+    "range" : "86",
+    "domain" : "44",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "201"
+  }, {
+    "range" : "196",
+    "domain" : "44",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "202"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_weapon_strength",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "has_weapon_strength",
+      "undefined" : "has_weapon_strength"
+    },
+    "domain" : "25",
+    "comment" : {
+      "en" : "The strength of a weapon is measured in percentage, i.e. an integer from 0 to 100."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "203"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#is_character_alive",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "204",
+    "label" : {
+      "IRI-based" : "is_character_alive",
+      "undefined" : "is_character_alive"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "The date in which the physical person dies or the character dissapears from the series."
+    },
+    "attributes" : [ "functional", "datatype", "someValues" ],
+    "id" : "205"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_language_code",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "has_language_code",
+      "undefined" : "has_language_code"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "The ISO code of a language"
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "206"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_staff",
+    "inverse" : "98",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "180",
+    "label" : {
+      "IRI-based" : "has_staff",
+      "undefined" : "has_staff"
+    },
+    "domain" : "8",
+    "subproperty" : [ "112", "169" ],
+    "comment" : {
+      "en" : "The staff that works as in a series which are not actors."
+    },
+    "attributes" : [ "object" ],
+    "id" : "113"
+  }, {
+    "range" : "25",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "207"
+  }, {
+    "iri" : "https://w3id.org/def/game-of-thrones-ontology17/#has_genre",
+    "inverse" : "69",
+    "baseIri" : "https://w3id.org/def/game-of-thrones-ontology17/",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "has_genre",
+      "undefined" : "has_genre"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "A series must have one or more genre that define the type of content."
+    },
+    "attributes" : [ "object" ],
+    "id" : "208"
+  }, {
+    "range" : "25",
+    "domain" : "50",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "209"
+  }, {
+    "range" : "8",
+    "domain" : "50",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "210"
+  }, {
+    "range" : "25",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "211"
+  }, {
+    "range" : "8",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "212"
+  } ]
+}
